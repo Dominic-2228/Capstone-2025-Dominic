@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+
+$font-family-base: 'Noto Serif', serif;
+$primary: #b06230;
+$secondary: #052f69;
+$gradient-light: (
+  'background': linear-gradient(45deg, #0d0301, #064884),
+  'color': white
+);
+
+body {
+  background: linear-gradient(65deg, #0d0301, #052f69);
+  @keyframes appear {
+    from{
+      opacity: 0;
+      scale: 0.5
+    }
+    to {
+      opacity: 1;
+      scale: 1;
+    }
+  }
+  overflow-x: hidden;
+}
+
+.home-container {
+  position: relative;
+  width: 100%;
+  max-width: 2560px;
+  margin: 0 auto;
+}
+
+.bible-img {
+  max-width: 100vw;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+.home-text {
+  position: absolute;
+  top: 15%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  animation: appear 5s linear forwards;
+  animation-timeline: view();
+  animation-range: entry 0;
+  color: white;
+  text-align: center
+}
+
+.linebreak {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ margin: 5rem;
+ font-size: 3rem;
+ color: white;
+ border-bottom: solid black 3px;
+}
+
+.oversea-works{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10rem;
+}
+
+.button-support {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";

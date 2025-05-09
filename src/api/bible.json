@@ -1,0 +1,384 @@
+{
+  "posts": [{
+    "id": 1,
+    "title": "What John 1:3 Showed Me About The Godhead",
+    "body": "This verse showed me that Jesus is the One True God!",
+    "date": "2025-05-08T07:18:34+0000",
+    "bibleBookId": 43,
+    "BibleVerseId": 3,
+    "userId": 1,
+    "feelingId": 2
+  },
+  {
+      "id": 2,
+      "title": "Peace in Psalms 23",
+      "body": "Even though I walk through the valley, I fear no evil.",
+      "date": "2025-05-08T10:00:00+0000",
+      "bibleBookId": 19,
+      "BibleVerseId": 4,
+      "userId": 2,
+      "feelingId": 1
+    },
+    {
+      "id": 3,
+      "title": "Grace Revealed in Romans 5:8",
+      "body": "Christ died for me while I was still a sinner. That's love!",
+      "date": "2025-05-08T10:01:00+0000",
+      "bibleBookId": 45,
+      "BibleVerseId": 8,
+      "userId": 3,
+      "feelingId": 2
+    },
+    {
+      "id": 4,
+      "title": "Hope in Isaiah 40:31",
+      "body": "Those who wait on the Lord shall renew their strength.",
+      "date": "2025-05-08T10:02:00+0000",
+      "bibleBookId": 23,
+      "BibleVerseId": 31,
+      "userId": 4,
+      "feelingId": 1
+    },
+    {
+      "id": 5,
+      "title": "Trust in Proverbs 3:5",
+      "body": "Lean not on your own understanding, this changed how I think!",
+      "date": "2025-05-08T10:03:00+0000",
+      "bibleBookId": 20,
+      "BibleVerseId": 5,
+      "userId": 5,
+      "feelingId": 2
+    },
+    {
+      "id": 6,
+      "title": "Ephesians 2:10 Empowered Me",
+      "body": "I'm God's workmanship, created for good works!",
+      "date": "2025-05-08T10:04:00+0000",
+      "bibleBookId": 49,
+      "BibleVerseId": 10,
+      "userId": 6,
+      "feelingId": 1
+    },
+    {
+      "id": 7,
+      "title": "Boldness in Acts 4:13",
+      "body": "They saw their boldness and realized they had been with Jesus!",
+      "date": "2025-05-08T10:05:00+0000",
+      "bibleBookId": 44,
+      "BibleVerseId": 13,
+      "userId": 7,
+      "feelingId": 2
+    },
+    {
+      "id": 8,
+      "title": "Love in 1 Corinthians 13",
+      "body": "Love never fails — this hit me hard during a tough season.",
+      "date": "2025-05-08T10:06:00+0000",
+      "bibleBookId": 46,
+      "BibleVerseId": 4,
+      "userId": 8,
+      "feelingId": 1
+    },
+    {
+      "id": 9,
+      "title": "Convicted by James 1:22",
+      "body": "Don't just hear the Word, do it!",
+      "date": "2025-05-08T10:07:00+0000",
+      "bibleBookId": 59,
+      "BibleVerseId": 22,
+      "userId": 9,
+      "feelingId": 2
+    },
+    {
+      "id": 10,
+      "title": "Strength in Nehemiah 8:10",
+      "body": "The joy of the Lord is my strength!",
+      "date": "2025-05-08T10:08:00+0000",
+      "bibleBookId": 16,
+      "BibleVerseId": 10,
+      "userId": 10,
+      "feelingId": 1
+    },
+    {
+      "id": 11,
+      "title": "Matthew 6:33 Gave Me Focus",
+      "body": "Seek first the Kingdom — now I prioritize differently.",
+      "date": "2025-05-08T10:09:00+0000",
+      "bibleBookId": 40,
+      "BibleVerseId": 33,
+      "userId": 11,
+      "feelingId": 2
+    },
+    {
+      "id": 12,
+      "title": "Freedom in Galatians 5:1",
+      "body": "Christ set me free — I won't go back to bondage.",
+      "date": "2025-05-08T10:10:00+0000",
+      "bibleBookId": 48,
+      "BibleVerseId": 1,
+      "userId": 12,
+      "feelingId": 1
+    },
+    {
+      "id": 13,
+      "title": "Psalm 119:105 Lit My Path",
+      "body": "God's Word is truly a lamp to my feet.",
+      "date": "2025-05-08T10:11:00+0000",
+      "bibleBookId": 19,
+      "BibleVerseId": 105,
+      "userId": 13,
+      "feelingId": 1
+    },
+    {
+      "id": 14,
+      "title": "Faith from Hebrews 11:1",
+      "body": "Faith is the substance — I finally understand it.",
+      "date": "2025-05-08T10:12:00+0000",
+      "bibleBookId": 58,
+      "BibleVerseId": 1,
+      "userId": 14,
+      "feelingId": 2
+    },
+    {
+      "id": 15,
+      "title": "Psalm 91: Protection and Peace",
+      "body": "I dwell in the secret place of the Most High.",
+      "date": "2025-05-08T10:13:00+0000",
+      "bibleBookId": 19,
+      "BibleVerseId": 1,
+      "userId": 15,
+      "feelingId": 1
+    },
+    {
+      "id": 16,
+      "title": "Romans 12:2 Transformed Me",
+      "body": "I no longer conform to this world — my mind is renewed!",
+      "date": "2025-05-08T10:14:00+0000",
+      "bibleBookId": 45,
+      "BibleVerseId": 2,
+      "userId": 16,
+      "feelingId": 2
+    },
+    {
+      "id": 17,
+      "title": "God's Peace in Philippians 4:7",
+      "body": "His peace guards my heart and mind.",
+      "date": "2025-05-08T10:15:00+0000",
+      "bibleBookId": 50,
+      "BibleVerseId": 7,
+      "userId": 17,
+      "feelingId": 1
+    },
+    {
+      "id": 18,
+      "title": "1 John 4:18 Drove Out My Fear",
+      "body": "Perfect love casts out fear. I walk freer now.",
+      "date": "2025-05-08T10:16:00+0000",
+      "bibleBookId": 62,
+      "BibleVerseId": 18,
+      "userId": 18,
+      "feelingId": 1
+    },
+    {
+      "id": 19,
+      "title": "2 Timothy 1:7, A Sound Mind",
+      "body": "I am not afraid. I walk in power, love, and clarity.",
+      "date": "2025-05-08T10:17:00+0000",
+      "bibleBookId": 55,
+      "BibleVerseId": 7,
+      "userId": 19,
+      "feelingId": 2
+    },
+    {
+      "id": 20,
+      "title": "John 14:6 Made It Clear",
+      "body": "Jesus is the only way — I don't doubt anymore.",
+      "date": "2025-05-08T10:18:00+0000",
+      "bibleBookId": 43,
+      "BibleVerseId": 6,
+      "userId": 20,
+      "feelingId": 2
+    },
+    {
+      "id": 21,
+      "title": "Genesis 1:1 — In The Beginning",
+      "body": "This reminded me that everything starts with God.",
+      "date": "2025-05-08T10:19:00+0000",
+      "bibleBookId": 1,
+      "BibleVerseId": 1,
+      "userId": 21,
+      "feelingId": 1
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "fullName": "Dom Till",
+      "email": "nunyas@nope.com",
+      "isAdmin": true
+    },
+     {
+    "id": 2,
+    "fullName": "Ava Thompson",
+    "email": "ava.thompson@example.com",
+    "isAdmin": false
+  },
+  {
+    "id": 3,
+    "fullName": "Ethan Brooks",
+    "email": "ethan.brooks@example.com",
+    "isAdmin": false
+  },
+  {
+    "id": 4,
+    "fullName": "Liam Carter",
+    "email": "liam.carter@example.com",
+    "isAdmin": false
+  },
+  {
+    "id": 5,
+    "fullName": "Sophia Miller",
+    "email": "sophia.miller@example.com",
+    "isAdmin": false
+  },
+  {
+    "id": 6,
+    "fullName": "Noah Parker",
+    "email": "noah.parker@example.com",
+    "isAdmin": false
+  },
+  {
+    "id": 7,
+    "fullName": "Mia Clark",
+    "email": "mia.clark@example.com",
+    "isAdmin": false
+  },
+  {
+    "id": 8,
+    "fullName": "Jackson Lee",
+    "email": "jackson.lee@example.com",
+    "isAdmin": false
+  },
+  {
+    "id": 9,
+    "fullName": "Isabella White",
+    "email": "isabella.white@example.com",
+    "isAdmin": false
+  },
+  {
+    "id": 10,
+    "fullName": "Benjamin Hall",
+    "email": "ben.hall@example.com",
+    "isAdmin": false
+  },
+  {
+    "id": 11,
+    "fullName": "Emily Adams",
+    "email": "emily.adams@example.com",
+    "isAdmin": false
+  },
+  {
+    "id": 12,
+    "fullName": "Lucas Scott",
+    "email": "lucas.scott@example.com",
+    "isAdmin": false
+  },
+  {
+    "id": 13,
+    "fullName": "Aria Nelson",
+    "email": "aria.nelson@example.com",
+    "isAdmin": false
+  },
+  {
+    "id": 14,
+    "fullName": "Henry Rivera",
+    "email": "henry.rivera@example.com",
+    "isAdmin": false
+  },
+  {
+    "id": 15,
+    "fullName": "Grace Mitchell",
+    "email": "grace.mitchell@example.com",
+    "isAdmin": false
+  },
+  {
+    "id": 16,
+    "fullName": "Daniel Turner",
+    "email": "daniel.turner@example.com",
+    "isAdmin": false
+  },
+  {
+    "id": 17,
+    "fullName": "Chloe Young",
+    "email": "chloe.young@example.com",
+    "isAdmin": false
+  },
+  {
+    "id": 18,
+    "fullName": "Sebastian Flores",
+    "email": "sebastian.flores@example.com",
+    "isAdmin": false
+  },
+  {
+    "id": 19,
+    "fullName": "Lily Ramirez",
+    "email": "lily.ramirez@example.com",
+    "isAdmin": false
+  },
+  {
+    "id": 20,
+    "fullName": "Owen Bennett",
+    "email": "owen.bennett@example.com",
+    "isAdmin": false
+  },
+  {
+    "id": 21,
+    "fullName": "Zoe Collins",
+    "email": "zoe.collins@example.com",
+    "isAdmin": false
+  }
+  ],
+  "feelings": [
+    {
+      "id": 1,
+      "feeling": "Encouraged"
+    },
+    {
+      "id": 2,
+      "feeling": "Revelation"
+    },
+    {
+    "id": 3,
+    "feeling": "Convicted"
+  },
+  {
+    "id": 4,
+    "feeling": "Thankful"
+  },
+  {
+    "id": 5,
+    "feeling": "Peaceful"
+  }
+  ],
+  "userLikes": [
+    {
+      "id": 1,
+      "postId": 1,
+      "userId": 3
+    }
+  ],
+  "postComments": [
+    {
+      "id": 1, 
+      "postId": 1,
+      "commentId": 1
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "That verse also showed me Oneness!",
+      "userId": 1
+    }
+  ]
+}
