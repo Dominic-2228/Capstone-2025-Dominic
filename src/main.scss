@@ -25,8 +25,7 @@ body {
 
 .home-container {
   position: relative;
-  width: 100%;
-  max-width: 2560px;
+  width: 100vw;
   margin: 0 auto;
 }
 
@@ -73,6 +72,23 @@ body {
   justify-content: center;
   align-items: center;
   margin-bottom: 5rem;
+}
+
+.AllPost-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 100%;
+  width: 100vw;
+}
+
+.allPost-idv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+  border-bottom: solid black 2px;
 }
 
 @import "../node_modules/bootstrap/scss/bootstrap.scss";

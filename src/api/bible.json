@@ -5,9 +5,10 @@
     "body": "This verse showed me that Jesus is the One True God!",
     "date": "2025-05-08T07:18:34+0000",
     "bibleBookId": 43,
-    "BibleVerseId": 3,
+    "bibleVerseId": 3,
     "userId": 1,
-    "feelingId": 2
+    "feelingId": 2,
+    "likes": 4
   },
   {
       "id": 2,
@@ -15,9 +16,10 @@
       "body": "Even though I walk through the valley, I fear no evil.",
       "date": "2025-05-08T10:00:00+0000",
       "bibleBookId": 19,
-      "BibleVerseId": 4,
+      "bibleVerseId": 4,
       "userId": 2,
-      "feelingId": 1
+      "feelingId": 1,
+      "likes": 4
     },
     {
       "id": 3,
@@ -25,9 +27,10 @@
       "body": "Christ died for me while I was still a sinner. That's love!",
       "date": "2025-05-08T10:01:00+0000",
       "bibleBookId": 45,
-      "BibleVerseId": 8,
+      "bibleVerseId": 8,
       "userId": 3,
-      "feelingId": 2
+      "feelingId": 2,
+      "likes": 4
     },
     {
       "id": 4,
@@ -35,9 +38,10 @@
       "body": "Those who wait on the Lord shall renew their strength.",
       "date": "2025-05-08T10:02:00+0000",
       "bibleBookId": 23,
-      "BibleVerseId": 31,
+      "bibleVerseId": 31,
       "userId": 4,
-      "feelingId": 1
+      "feelingId": 1,
+      "likes": 4
     },
     {
       "id": 5,
@@ -45,9 +49,10 @@
       "body": "Lean not on your own understanding, this changed how I think!",
       "date": "2025-05-08T10:03:00+0000",
       "bibleBookId": 20,
-      "BibleVerseId": 5,
+      "bibleVerseId": 5,
       "userId": 5,
-      "feelingId": 2
+      "feelingId": 2,
+      "likes": 4
     },
     {
       "id": 6,
@@ -55,9 +60,10 @@
       "body": "I'm God's workmanship, created for good works!",
       "date": "2025-05-08T10:04:00+0000",
       "bibleBookId": 49,
-      "BibleVerseId": 10,
+      "bibleVerseId": 10,
       "userId": 6,
-      "feelingId": 1
+      "feelingId": 1,
+      "likes": 4
     },
     {
       "id": 7,
@@ -65,9 +71,10 @@
       "body": "They saw their boldness and realized they had been with Jesus!",
       "date": "2025-05-08T10:05:00+0000",
       "bibleBookId": 44,
-      "BibleVerseId": 13,
+      "bibleVerseId": 13,
       "userId": 7,
-      "feelingId": 2
+      "feelingId": 2,
+      "likes": 4
     },
     {
       "id": 8,
@@ -75,9 +82,10 @@
       "body": "Love never fails — this hit me hard during a tough season.",
       "date": "2025-05-08T10:06:00+0000",
       "bibleBookId": 46,
-      "BibleVerseId": 4,
+      "bibleVerseId": 4,
       "userId": 8,
-      "feelingId": 1
+      "feelingId": 1,
+      "likes": 4
     },
     {
       "id": 9,
@@ -85,9 +93,10 @@
       "body": "Don't just hear the Word, do it!",
       "date": "2025-05-08T10:07:00+0000",
       "bibleBookId": 59,
-      "BibleVerseId": 22,
+      "bibleVerseId": 22,
       "userId": 9,
-      "feelingId": 2
+      "feelingId": 2,
+      "likes": 4
     },
     {
       "id": 10,
@@ -95,9 +104,10 @@
       "body": "The joy of the Lord is my strength!",
       "date": "2025-05-08T10:08:00+0000",
       "bibleBookId": 16,
-      "BibleVerseId": 10,
+      "bibleVerseId": 10,
       "userId": 10,
-      "feelingId": 1
+      "feelingId": 1,
+      "likes": 4
     },
     {
       "id": 11,
@@ -105,9 +115,10 @@
       "body": "Seek first the Kingdom — now I prioritize differently.",
       "date": "2025-05-08T10:09:00+0000",
       "bibleBookId": 40,
-      "BibleVerseId": 33,
+      "bibleVerseId": 33,
       "userId": 11,
-      "feelingId": 2
+      "feelingId": 2,
+      "likes": 4
     },
     {
       "id": 12,
@@ -115,9 +126,10 @@
       "body": "Christ set me free — I won't go back to bondage.",
       "date": "2025-05-08T10:10:00+0000",
       "bibleBookId": 48,
-      "BibleVerseId": 1,
+      "bibleVerseId": 1,
       "userId": 12,
-      "feelingId": 1
+      "feelingId": 1,
+      "likes": 4
     },
     {
       "id": 13,
@@ -125,9 +137,10 @@
       "body": "God's Word is truly a lamp to my feet.",
       "date": "2025-05-08T10:11:00+0000",
       "bibleBookId": 19,
-      "BibleVerseId": 105,
+      "bibleVerseId": 105,
       "userId": 13,
-      "feelingId": 1
+      "feelingId": 1,
+      "likes": 4
     },
     {
       "id": 14,
@@ -135,9 +148,10 @@
       "body": "Faith is the substance — I finally understand it.",
       "date": "2025-05-08T10:12:00+0000",
       "bibleBookId": 58,
-      "BibleVerseId": 1,
+      "bibleVerseId": 1,
       "userId": 14,
-      "feelingId": 2
+      "feelingId": 2,
+      "likes": 4
     },
     {
       "id": 15,
@@ -145,9 +159,10 @@
       "body": "I dwell in the secret place of the Most High.",
       "date": "2025-05-08T10:13:00+0000",
       "bibleBookId": 19,
-      "BibleVerseId": 1,
+      "bibleVerseId": 1,
       "userId": 15,
-      "feelingId": 1
+      "feelingId": 1,
+      "likes": 4
     },
     {
       "id": 16,
@@ -155,9 +170,10 @@
       "body": "I no longer conform to this world — my mind is renewed!",
       "date": "2025-05-08T10:14:00+0000",
       "bibleBookId": 45,
-      "BibleVerseId": 2,
+      "bibleVerseId": 2,
       "userId": 16,
-      "feelingId": 2
+      "feelingId": 2,
+      "likes": 4
     },
     {
       "id": 17,
@@ -165,9 +181,10 @@
       "body": "His peace guards my heart and mind.",
       "date": "2025-05-08T10:15:00+0000",
       "bibleBookId": 50,
-      "BibleVerseId": 7,
+      "bibleVerseId": 7,
       "userId": 17,
-      "feelingId": 1
+      "feelingId": 1,
+      "likes": 4
     },
     {
       "id": 18,
@@ -175,9 +192,10 @@
       "body": "Perfect love casts out fear. I walk freer now.",
       "date": "2025-05-08T10:16:00+0000",
       "bibleBookId": 62,
-      "BibleVerseId": 18,
+      "bibleVerseId": 18,
       "userId": 18,
-      "feelingId": 1
+      "feelingId": 1,
+      "likes": 4
     },
     {
       "id": 19,
@@ -185,9 +203,10 @@
       "body": "I am not afraid. I walk in power, love, and clarity.",
       "date": "2025-05-08T10:17:00+0000",
       "bibleBookId": 55,
-      "BibleVerseId": 7,
+      "bibleVerseId": 7,
       "userId": 19,
-      "feelingId": 2
+      "feelingId": 2,
+      "likes": 4
     },
     {
       "id": 20,
@@ -195,9 +214,10 @@
       "body": "Jesus is the only way — I don't doubt anymore.",
       "date": "2025-05-08T10:18:00+0000",
       "bibleBookId": 43,
-      "BibleVerseId": 6,
+      "bibleVerseId": 6,
       "userId": 20,
-      "feelingId": 2
+      "feelingId": 2,
+      "likes": 4
     },
     {
       "id": 21,
@@ -205,9 +225,10 @@
       "body": "This reminded me that everything starts with God.",
       "date": "2025-05-08T10:19:00+0000",
       "bibleBookId": 1,
-      "BibleVerseId": 1,
-      "userId": 21,
-      "feelingId": 1
+      "bibleVerseId": 1,
+      "userId": 1,
+      "feelingId": 1,
+      "likes": 4
     }
   ],
   "users": [

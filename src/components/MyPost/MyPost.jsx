@@ -1,19 +1,21 @@
-import Card from 'react-bootstrap/Card';
-import ListGroup from 'react-bootstrap/ListGroup';
 import { useEffect, useState } from "react"
-import { getAllPost } from "../services/AllPostServices.jsx"
+import { useParams } from "react-router-dom"
+import { getUserById } from "../services/userService.jsx"
+import { Card, ListGroup } from "react-bootstrap"
 
-export const AllPost = () => {
-    const [posts, setPosts] = useState([])
+export const MyPost = ({currentUser}) => {
 
-    useEffect(() => {
-      getAllPost().then(setPosts)
-    }, [])
+    const [myPosts, setMyPosts] = useState([])
   
+  useEffect(() => {
+    getUserById(currentUser.id).then(setMyPosts)
+  }, [currentUser])
+
+
   return (
     <>
-    <div className='AllPost-container'>
-    {posts.map((post) => {
+        <div className='AllPost-container'>
+    {myPosts.map((post) => {
       return(
         <div className='allPost-idv'>
       <Card style={{ width: '18rem' }}>
