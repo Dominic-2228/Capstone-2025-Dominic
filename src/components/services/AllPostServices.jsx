@@ -27,3 +27,13 @@ export const deletePost = (id) => {
     method: "DELETE"
   })
 }
+
+// export const likePost = (id, updatedPostArray) => {
+//   return fetch(`http://localhost:8088/posts/${id}`, {
+//     method: "PUT",
+//     headers: {
+//       "Content-Type": "application/json"
+//     },
+//     body: JSON.stringify(updatedPostArray)
+//   }).then(res => res.json())
+// }

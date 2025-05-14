@@ -31,6 +31,7 @@ export const Login = () => {
 
   return (
     <main className="container-login">
+        <img className="bible-logo" src="IMG/ChatGPT Image May 14, 2025, 11_24_32 AM.png" alt="bible"></img>
       <section>
         <form className="form-login" onSubmit={handleLogin}>
           <h1>BibleVerse Login</h1>

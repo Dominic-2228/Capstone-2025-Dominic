@@ -33,7 +33,6 @@ export const MyPost = ({currentUser}) => {
         <ListGroup.Item>Likes: {post.likes}</ListGroup.Item>
       </ListGroup>
       <Card.Body>
-        <Card.Link href="#">Like</Card.Link>
         <Card.Link as={Link} to={`/myposts/${post.id}`}>Edit</Card.Link>
       </Card.Body>
     </Card>

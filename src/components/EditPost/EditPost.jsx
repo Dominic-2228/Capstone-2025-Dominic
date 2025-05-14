@@ -26,7 +26,6 @@ export const EditPost = ({ currentUser }) => {
     userId: 0,
     likes: 0,
   });
-  console.log(postById);
 
   const navigate = useNavigate();
 
