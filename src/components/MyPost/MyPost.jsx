@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
-import { getUserById } from "../services/userService.jsx"
+import { getUserByUserId } from "../services/userService.jsx"
 import { Card, ListGroup } from "react-bootstrap"
+import { Link } from "react-router-dom"
 
 export const MyPost = ({currentUser}) => {
 
     const [myPosts, setMyPosts] = useState([])
   
   useEffect(() => {
-    getUserById(currentUser.id).then(setMyPosts)
+    getUserByUserId(currentUser.id).then(setMyPosts)
   }, [currentUser])
 
 
@@ -27,12 +27,14 @@ export const MyPost = ({currentUser}) => {
       </Card.Body>
       <ListGroup className="list-group-flush">
         <ListGroup.Item>Posted By: {post.user.fullName}</ListGroup.Item>
+        <ListGroup.Item>Book: {post.bibleBookId}</ListGroup.Item>
+        <ListGroup.Item>Verse: {post.bibleVerseId}</ListGroup.Item>
         <ListGroup.Item>Posted At: {new Date(post.date).toLocaleString()}</ListGroup.Item>
         <ListGroup.Item>Likes: {post.likes}</ListGroup.Item>
       </ListGroup>
       <Card.Body>
         <Card.Link href="#">Like</Card.Link>
-        <Card.Link href="#">Edit</Card.Link>
+        <Card.Link as={Link} to={`/myposts/${post.id}`}>Edit</Card.Link>
       </Card.Body>
     </Card>
     </div>

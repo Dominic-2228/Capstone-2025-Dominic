@@ -1,33 +1,33 @@
-import React, { useState } from "react"
-import { Link } from "react-router-dom"
-import { useNavigate } from "react-router-dom"
-import "./Login.css"
-import { getUserByEmail } from "../services/userService.jsx"
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import "./Login.css";
+import { getUserByEmail } from "../services/userService.jsx";
 
 export const Login = () => {
-  const [email, set] = useState("nunyas@nope.com")
-  const navigate = useNavigate()
+  const [email, set] = useState("nunyas@nope.com");
+  const navigate = useNavigate();
 
   const handleLogin = (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
     getUserByEmail(email).then((foundUsers) => {
       if (foundUsers.length === 1) {
-        const user = foundUsers[0]
+        const user = foundUsers[0];
         localStorage.setItem(
           "bible_user",
           JSON.stringify({
             id: user.id,
             isStaff: user.isStaff,
           })
-        )
+        );
 
-        navigate("/")
+        navigate("/");
       } else {
-        window.alert("Invalid login")
+        window.alert("Invalid login");
       }
-    })
-  }
+    });
+  };
 
   return (
     <main className="container-login">
@@ -55,11 +55,11 @@ export const Login = () => {
               </button>
             </div>
           </fieldset>
+          <fieldset>
+            <Link to="/register">Not a member yet?</Link>
+          </fieldset>
         </form>
       </section>
-      <section>
-        <Link to="/register">Not a member yet?</Link>
-      </section>
     </main>
-  )
-}
+  );
+};

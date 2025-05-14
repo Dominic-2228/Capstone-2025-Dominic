@@ -1,21 +1,12 @@
 {
-  "posts": [{
-    "id": 1,
-    "title": "What John 1:3 Showed Me About The Godhead",
-    "body": "This verse showed me that Jesus is the One True God!",
-    "date": "2025-05-08T07:18:34+0000",
-    "bibleBookId": 43,
-    "bibleVerseId": 3,
-    "userId": 1,
-    "feelingId": 2,
-    "likes": 4
-  },
-  {
+  "posts": [
+    {
       "id": 2,
       "title": "Peace in Psalms 23",
       "body": "Even though I walk through the valley, I fear no evil.",
       "date": "2025-05-08T10:00:00+0000",
-      "bibleBookId": 19,
+      "bibleBookId": "PSA",
+      "bibleChapterId": 23,
       "bibleVerseId": 4,
       "userId": 2,
       "feelingId": 1,
@@ -26,7 +17,8 @@
       "title": "Grace Revealed in Romans 5:8",
       "body": "Christ died for me while I was still a sinner. That's love!",
       "date": "2025-05-08T10:01:00+0000",
-      "bibleBookId": 45,
+      "bibleBookId": "ROM",
+      "bibleChapterId": 5,
       "bibleVerseId": 8,
       "userId": 3,
       "feelingId": 2,
@@ -37,7 +29,8 @@
       "title": "Hope in Isaiah 40:31",
       "body": "Those who wait on the Lord shall renew their strength.",
       "date": "2025-05-08T10:02:00+0000",
-      "bibleBookId": 23,
+      "bibleBookId": "ISA",
+      "bibleChapterId": 40,
       "bibleVerseId": 31,
       "userId": 4,
       "feelingId": 1,
@@ -48,7 +41,8 @@
       "title": "Trust in Proverbs 3:5",
       "body": "Lean not on your own understanding, this changed how I think!",
       "date": "2025-05-08T10:03:00+0000",
-      "bibleBookId": 20,
+      "bibleBookId": "PRO",
+      "bibleChapterId": 3,
       "bibleVerseId": 5,
       "userId": 5,
       "feelingId": 2,
@@ -59,7 +53,8 @@
       "title": "Ephesians 2:10 Empowered Me",
       "body": "I'm God's workmanship, created for good works!",
       "date": "2025-05-08T10:04:00+0000",
-      "bibleBookId": 49,
+      "bibleBookId": "EPH",
+      "bibleChapterId": 2,
       "bibleVerseId": 10,
       "userId": 6,
       "feelingId": 1,
@@ -70,7 +65,8 @@
       "title": "Boldness in Acts 4:13",
       "body": "They saw their boldness and realized they had been with Jesus!",
       "date": "2025-05-08T10:05:00+0000",
-      "bibleBookId": 44,
+      "bibleBookId": "ACT",
+      "bibleChapterId": 4,
       "bibleVerseId": 13,
       "userId": 7,
       "feelingId": 2,
@@ -81,7 +77,8 @@
       "title": "Love in 1 Corinthians 13",
       "body": "Love never fails — this hit me hard during a tough season.",
       "date": "2025-05-08T10:06:00+0000",
-      "bibleBookId": 46,
+      "bibleBookId": "1CO",
+      "bibleChapterId": 13,
       "bibleVerseId": 4,
       "userId": 8,
       "feelingId": 1,
@@ -92,7 +89,8 @@
       "title": "Convicted by James 1:22",
       "body": "Don't just hear the Word, do it!",
       "date": "2025-05-08T10:07:00+0000",
-      "bibleBookId": 59,
+      "bibleBookId": "JAS",
+      "bibleChapterId": 1,
       "bibleVerseId": 22,
       "userId": 9,
       "feelingId": 2,
@@ -103,7 +101,8 @@
       "title": "Strength in Nehemiah 8:10",
       "body": "The joy of the Lord is my strength!",
       "date": "2025-05-08T10:08:00+0000",
-      "bibleBookId": 16,
+      "bibleBookId": "NEH",
+      "bibleChapterId": 8,
       "bibleVerseId": 10,
       "userId": 10,
       "feelingId": 1,
@@ -114,7 +113,8 @@
       "title": "Matthew 6:33 Gave Me Focus",
       "body": "Seek first the Kingdom — now I prioritize differently.",
       "date": "2025-05-08T10:09:00+0000",
-      "bibleBookId": 40,
+      "bibleBookId": "MAT",
+      "bibleChapterId": 6,
       "bibleVerseId": 33,
       "userId": 11,
       "feelingId": 2,
@@ -125,7 +125,8 @@
       "title": "Freedom in Galatians 5:1",
       "body": "Christ set me free — I won't go back to bondage.",
       "date": "2025-05-08T10:10:00+0000",
-      "bibleBookId": 48,
+      "bibleBookId": "GAL",
+      "bibleChapterId": 5,
       "bibleVerseId": 1,
       "userId": 12,
       "feelingId": 1,
@@ -136,7 +137,8 @@
       "title": "Psalm 119:105 Lit My Path",
       "body": "God's Word is truly a lamp to my feet.",
       "date": "2025-05-08T10:11:00+0000",
-      "bibleBookId": 19,
+      "bibleBookId": "PSA",
+      "bibleChapterId": 119,
       "bibleVerseId": 105,
       "userId": 13,
       "feelingId": 1,
@@ -147,7 +149,8 @@
       "title": "Faith from Hebrews 11:1",
       "body": "Faith is the substance — I finally understand it.",
       "date": "2025-05-08T10:12:00+0000",
-      "bibleBookId": 58,
+      "bibleBookId": "HEB",
+      "bibleChapterId": 11,
       "bibleVerseId": 1,
       "userId": 14,
       "feelingId": 2,
@@ -158,7 +161,8 @@
       "title": "Psalm 91: Protection and Peace",
       "body": "I dwell in the secret place of the Most High.",
       "date": "2025-05-08T10:13:00+0000",
-      "bibleBookId": 19,
+      "bibleBookId": "PSA",
+      "bibleChapterId": 91,
       "bibleVerseId": 1,
       "userId": 15,
       "feelingId": 1,
@@ -169,7 +173,8 @@
       "title": "Romans 12:2 Transformed Me",
       "body": "I no longer conform to this world — my mind is renewed!",
       "date": "2025-05-08T10:14:00+0000",
-      "bibleBookId": 45,
+      "bibleBookId": "ROM",
+      "bibleChapterId": 12,
       "bibleVerseId": 2,
       "userId": 16,
       "feelingId": 2,
@@ -180,7 +185,8 @@
       "title": "God's Peace in Philippians 4:7",
       "body": "His peace guards my heart and mind.",
       "date": "2025-05-08T10:15:00+0000",
-      "bibleBookId": 50,
+      "bibleBookId": "PHP",
+      "bibleChapterId": 4,
       "bibleVerseId": 7,
       "userId": 17,
       "feelingId": 1,
@@ -191,7 +197,8 @@
       "title": "1 John 4:18 Drove Out My Fear",
       "body": "Perfect love casts out fear. I walk freer now.",
       "date": "2025-05-08T10:16:00+0000",
-      "bibleBookId": 62,
+      "bibleBookId": "1JN",
+      "bibleChapterId": 4,
       "bibleVerseId": 18,
       "userId": 18,
       "feelingId": 1,
@@ -202,7 +209,8 @@
       "title": "2 Timothy 1:7, A Sound Mind",
       "body": "I am not afraid. I walk in power, love, and clarity.",
       "date": "2025-05-08T10:17:00+0000",
-      "bibleBookId": 55,
+      "bibleBookId": "1TI",
+      "bibleChapterId": 1,
       "bibleVerseId": 7,
       "userId": 19,
       "feelingId": 2,
@@ -213,22 +221,66 @@
       "title": "John 14:6 Made It Clear",
       "body": "Jesus is the only way — I don't doubt anymore.",
       "date": "2025-05-08T10:18:00+0000",
-      "bibleBookId": 43,
+      "bibleBookId": "JHN",
+      "bibleChapterId": 14,
       "bibleVerseId": 6,
       "userId": 20,
       "feelingId": 2,
       "likes": 4
     },
     {
-      "id": 21,
       "title": "Genesis 1:1 — In The Beginning",
       "body": "This reminded me that everything starts with God.",
-      "date": "2025-05-08T10:19:00+0000",
-      "bibleBookId": 1,
+      "bibleBookId": "GEN",
+      "bibleChapterId": 1,
       "bibleVerseId": 1,
       "userId": 1,
-      "feelingId": 1,
-      "likes": 4
+      "likes": 0,
+      "date": "2025-05-13T19:32:32.863Z",
+      "id": 21
+    },
+    {
+      "title": "This was a great passage",
+      "body": "Greatness",
+      "bibleBookId": "JDG",
+      "bibleChapterId": 13,
+      "bibleVerseId": 28,
+      "userId": 1,
+      "likes": 0,
+      "date": "2025-05-13T20:11:11.637Z",
+      "id": 22,
+      "user": {
+        "id": 1,
+        "fullName": "Dom Till",
+        "email": "nunyas@nope.com",
+        "isAdmin": true
+      }
+    },
+    {
+      "title": "Just Before Passover",
+      "body": "Type of Baptism in Jesus Name",
+      "bibleBookId": "EXO",
+      "bibleChapterId": 2,
+      "bibleVerseId": 10,
+      "userId": 1,
+      "likes": 0,
+      "id": 23
+    },
+    {
+      "title": "Faith!",
+      "body": "wow",
+      "bibleBookId": "GEN",
+      "bibleChapterId": 11,
+      "bibleVerseId": 1,
+      "userId": 1,
+      "likes": 0,
+      "id": 24,
+      "user": {
+        "id": 1,
+        "fullName": "Dom Till",
+        "email": "nunyas@nope.com",
+        "isAdmin": true
+      }
     }
   ],
   "users": [
@@ -238,126 +290,126 @@
       "email": "nunyas@nope.com",
       "isAdmin": true
     },
-     {
-    "id": 2,
-    "fullName": "Ava Thompson",
-    "email": "ava.thompson@example.com",
-    "isAdmin": false
-  },
-  {
-    "id": 3,
-    "fullName": "Ethan Brooks",
-    "email": "ethan.brooks@example.com",
-    "isAdmin": false
-  },
-  {
-    "id": 4,
-    "fullName": "Liam Carter",
-    "email": "liam.carter@example.com",
-    "isAdmin": false
-  },
-  {
-    "id": 5,
-    "fullName": "Sophia Miller",
-    "email": "sophia.miller@example.com",
-    "isAdmin": false
-  },
-  {
-    "id": 6,
-    "fullName": "Noah Parker",
-    "email": "noah.parker@example.com",
-    "isAdmin": false
-  },
-  {
-    "id": 7,
-    "fullName": "Mia Clark",
-    "email": "mia.clark@example.com",
-    "isAdmin": false
-  },
-  {
-    "id": 8,
-    "fullName": "Jackson Lee",
-    "email": "jackson.lee@example.com",
-    "isAdmin": false
-  },
-  {
-    "id": 9,
-    "fullName": "Isabella White",
-    "email": "isabella.white@example.com",
-    "isAdmin": false
-  },
-  {
-    "id": 10,
-    "fullName": "Benjamin Hall",
-    "email": "ben.hall@example.com",
-    "isAdmin": false
-  },
-  {
-    "id": 11,
-    "fullName": "Emily Adams",
-    "email": "emily.adams@example.com",
-    "isAdmin": false
-  },
-  {
-    "id": 12,
-    "fullName": "Lucas Scott",
-    "email": "lucas.scott@example.com",
-    "isAdmin": false
-  },
-  {
-    "id": 13,
-    "fullName": "Aria Nelson",
-    "email": "aria.nelson@example.com",
-    "isAdmin": false
-  },
-  {
-    "id": 14,
-    "fullName": "Henry Rivera",
-    "email": "henry.rivera@example.com",
-    "isAdmin": false
-  },
-  {
-    "id": 15,
-    "fullName": "Grace Mitchell",
-    "email": "grace.mitchell@example.com",
-    "isAdmin": false
-  },
-  {
-    "id": 16,
-    "fullName": "Daniel Turner",
-    "email": "daniel.turner@example.com",
-    "isAdmin": false
-  },
-  {
-    "id": 17,
-    "fullName": "Chloe Young",
-    "email": "chloe.young@example.com",
-    "isAdmin": false
-  },
-  {
-    "id": 18,
-    "fullName": "Sebastian Flores",
-    "email": "sebastian.flores@example.com",
-    "isAdmin": false
-  },
-  {
-    "id": 19,
-    "fullName": "Lily Ramirez",
-    "email": "lily.ramirez@example.com",
-    "isAdmin": false
-  },
-  {
-    "id": 20,
-    "fullName": "Owen Bennett",
-    "email": "owen.bennett@example.com",
-    "isAdmin": false
-  },
-  {
-    "id": 21,
-    "fullName": "Zoe Collins",
-    "email": "zoe.collins@example.com",
-    "isAdmin": false
-  }
+    {
+      "id": 2,
+      "fullName": "Ava Thompson",
+      "email": "ava.thompson@example.com",
+      "isAdmin": false
+    },
+    {
+      "id": 3,
+      "fullName": "Ethan Brooks",
+      "email": "ethan.brooks@example.com",
+      "isAdmin": false
+    },
+    {
+      "id": 4,
+      "fullName": "Liam Carter",
+      "email": "liam.carter@example.com",
+      "isAdmin": false
+    },
+    {
+      "id": 5,
+      "fullName": "Sophia Miller",
+      "email": "sophia.miller@example.com",
+      "isAdmin": false
+    },
+    {
+      "id": 6,
+      "fullName": "Noah Parker",
+      "email": "noah.parker@example.com",
+      "isAdmin": false
+    },
+    {
+      "id": 7,
+      "fullName": "Mia Clark",
+      "email": "mia.clark@example.com",
+      "isAdmin": false
+    },
+    {
+      "id": 8,
+      "fullName": "Jackson Lee",
+      "email": "jackson.lee@example.com",
+      "isAdmin": false
+    },
+    {
+      "id": 9,
+      "fullName": "Isabella White",
+      "email": "isabella.white@example.com",
+      "isAdmin": false
+    },
+    {
+      "id": 10,
+      "fullName": "Benjamin Hall",
+      "email": "ben.hall@example.com",
+      "isAdmin": false
+    },
+    {
+      "id": 11,
+      "fullName": "Emily Adams",
+      "email": "emily.adams@example.com",
+      "isAdmin": false
+    },
+    {
+      "id": 12,
+      "fullName": "Lucas Scott",
+      "email": "lucas.scott@example.com",
+      "isAdmin": false
+    },
+    {
+      "id": 13,
+      "fullName": "Aria Nelson",
+      "email": "aria.nelson@example.com",
+      "isAdmin": false
+    },
+    {
+      "id": 14,
+      "fullName": "Henry Rivera",
+      "email": "henry.rivera@example.com",
+      "isAdmin": false
+    },
+    {
+      "id": 15,
+      "fullName": "Grace Mitchell",
+      "email": "grace.mitchell@example.com",
+      "isAdmin": false
+    },
+    {
+      "id": 16,
+      "fullName": "Daniel Turner",
+      "email": "daniel.turner@example.com",
+      "isAdmin": false
+    },
+    {
+      "id": 17,
+      "fullName": "Chloe Young",
+      "email": "chloe.young@example.com",
+      "isAdmin": false
+    },
+    {
+      "id": 18,
+      "fullName": "Sebastian Flores",
+      "email": "sebastian.flores@example.com",
+      "isAdmin": false
+    },
+    {
+      "id": 19,
+      "fullName": "Lily Ramirez",
+      "email": "lily.ramirez@example.com",
+      "isAdmin": false
+    },
+    {
+      "id": 20,
+      "fullName": "Owen Bennett",
+      "email": "owen.bennett@example.com",
+      "isAdmin": false
+    },
+    {
+      "id": 21,
+      "fullName": "Zoe Collins",
+      "email": "zoe.collins@example.com",
+      "isAdmin": false
+    }
   ],
   "feelings": [
     {
@@ -369,32 +421,20 @@
       "feeling": "Revelation"
     },
     {
-    "id": 3,
-    "feeling": "Convicted"
-  },
-  {
-    "id": 4,
-    "feeling": "Thankful"
-  },
-  {
-    "id": 5,
-    "feeling": "Peaceful"
-  }
-  ],
-  "userLikes": [
+      "id": 3,
+      "feeling": "Convicted"
+    },
     {
-      "id": 1,
-      "postId": 1,
-      "userId": 3
+      "id": 4,
+      "feeling": "Thankful"
+    },
+    {
+      "id": 5,
+      "feeling": "Peaceful"
     }
   ],
-  "postComments": [
-    {
-      "id": 1, 
-      "postId": 1,
-      "commentId": 1
-    }
-  ],
+  "userLikes": [],
+  "postComments": [],
   "comments": [
     {
       "id": 1,
