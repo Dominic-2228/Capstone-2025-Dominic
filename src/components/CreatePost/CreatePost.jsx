@@ -1,3 +1,5 @@
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
 import { useNavigate } from "react-router-dom";
 import { createCustomPost } from "../services/AllPostServices.jsx";
 import { useEffect, useState } from "react";
@@ -22,6 +24,7 @@ export const CreatePost = ({ currentUser }) => {
     bibleVerseId: 0,
     userId: 0,
     likes: 0,
+    date: new Date()
   });
 
   const navigate = useNavigate();
@@ -84,9 +87,10 @@ export const CreatePost = ({ currentUser }) => {
 
   return (
     <>
-      <form>
+    <div className="createUpdatepost-container">
+      <form className="form-container">
         <h2>Book</h2>
-        <select
+        <Form.Select aria-label="Default select example"
           onChange={(e) => {
             handleBookChange(e);
             const copy = { ...createPosts };
@@ -102,9 +106,9 @@ export const CreatePost = ({ currentUser }) => {
               </option>
             );
           })}
-        </select>
+        </Form.Select>
         <h2>Chapter</h2>
-        <select
+        <Form.Select aria-label="Default select example"
           onChange={(e) => {
             const chapter = e.target.value;
             setChapter(parseInt(chapter));
@@ -121,10 +125,10 @@ export const CreatePost = ({ currentUser }) => {
               </option>
             );
           })}
-        </select>
+        </Form.Select>
 
         <h2>Verse</h2>
-        <select
+        <Form.Select aria-label="Default select example"
           onChange={(e) => {
             const chosenVerse = e.target.value;
             setVerse(parseInt(chosenVerse));
@@ -141,10 +145,10 @@ export const CreatePost = ({ currentUser }) => {
               </option>
             );
           })}
-        </select>
+        </Form.Select>
 
-        <h2>Title: </h2>
-        <input
+        <h2>Title </h2>
+        <Form.Control as="textarea" rows={3}
           placeholder="Enter Title"
           type="text"
           onChange={(e) => {
@@ -153,9 +157,9 @@ export const CreatePost = ({ currentUser }) => {
             copy.title = chosenTitle;
             setCreatePosts(copy);
           }}
-        ></input>
+        ></Form.Control>
         <h2>Description</h2>
-        <input
+        <Form.Control as="textarea" rows={3}
           placeholder="Enter Description"
           type="text"
           onChange={(e) => {
@@ -164,9 +168,10 @@ export const CreatePost = ({ currentUser }) => {
             copy.body = chosenDesc;
             setCreatePosts(copy);
           }}
-        ></input>
+        ></Form.Control>
       </form>
-      <button onClick={handleSave}>Create Post</button>
+      <Button variant="primary" onClick={handleSave}>Create Post</Button>
+      </div>
     </>
   );
 };

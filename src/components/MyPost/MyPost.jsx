@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { getUserByUserId } from "../services/userService.jsx"
-import { Card, ListGroup } from "react-bootstrap"
+import { Button, Card, ListGroup } from "react-bootstrap"
 import { Link } from "react-router-dom"
 
 export const MyPost = ({currentUser}) => {
@@ -33,7 +33,7 @@ export const MyPost = ({currentUser}) => {
         <ListGroup.Item>Likes: {post.likes}</ListGroup.Item>
       </ListGroup>
       <Card.Body>
-        <Card.Link as={Link} to={`/myposts/${post.id}`}>Edit</Card.Link>
+        <Button as={Link} to={`/myposts/${post.id}`}>Edit</Button>
       </Card.Body>
     </Card>
     </div>

@@ -28,12 +28,27 @@ export const deletePost = (id) => {
   })
 }
 
-// export const likePost = (id, updatedPostArray) => {
-//   return fetch(`http://localhost:8088/posts/${id}`, {
-//     method: "PUT",
-//     headers: {
-//       "Content-Type": "application/json"
-//     },
-//     body: JSON.stringify(updatedPostArray)
-//   }).then(res => res.json())
-// }
+export const likePostPut = (id, updatedPost) => {
+  return fetch(`http://localhost:8088/posts/${id}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(updatedPost)
+  }).then(res => res.json())
+}
+
+
+export const getLikedPosts = () => {
+  return fetch(`http://localhost:8088/userLikes?_expand=user&_expand=post`).then((res) => res.json())
+}
+
+export const postComments = (comment) => {
+  return fetch(`http://localhost:8088/comments`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(comment)
+  }).then(res => res.json())
+}

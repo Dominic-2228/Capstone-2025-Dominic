@@ -7,6 +7,9 @@ import { MyPost } from "../components/MyPost/MyPost.jsx";
 import { CreatePost } from "../components/CreatePost/CreatePost.jsx";
 import { EditPost } from "../components/EditPost/EditPost.jsx";
 import { Support } from "../components/Support/Support.jsx";
+import { LikedPost } from "../components/LikedPost/LikedPost.jsx";
+import { CommentPost } from "../components/Comment/Comment.jsx";
+import { CreateComment } from "../components/Comment/CreateComment.jsx";
 
 export const ApplicationViews = () => {
   const [currentUser, setCurrentUser] = useState({});
@@ -31,12 +34,14 @@ export const ApplicationViews = () => {
           }
         >
           <Route index element={<HomePage />} />
-          <Route path="/allposts" element={<AllPost />} />
+          <Route path="/allposts" element={<AllPost currentUser={currentUser}/>} />
           <Route path="/myposts" element={<MyPost currentUser={currentUser}/>}/>
           <Route path="/createpost" element={<CreatePost currentUser={currentUser}/>}/>
           <Route path="/myposts/:postId" element={<EditPost currentUser={currentUser}/>}/> 
           <Route path="/support" element={<Support/>}/>
-          <Route path="/likedposts" element={<div>Liked Posts</div>} />
+          <Route path="/likedposts" element={<LikedPost currentUser={currentUser} />} />
+          <Route path="/comment/:postId" element={<CommentPost currentUser={currentUser}/>}/>
+          <Route path="/createcomment/:postId" element={<CreateComment currentUser={currentUser}/>}/>
         </Route>
       </Routes>
     </>

@@ -1,3 +1,4 @@
+import Form from "react-bootstrap/Form";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import {
@@ -6,6 +7,7 @@ import {
 } from "../services/apiCall.jsx";
 import { createUpdatePost, deletePost } from "../services/AllPostServices.jsx";
 import { getUserById } from "../services/userService.jsx";
+import { Button } from "react-bootstrap";
 
 export const EditPost = ({ currentUser }) => {
   const { postId } = useParams();
@@ -36,10 +38,10 @@ export const EditPost = ({ currentUser }) => {
   useEffect(() => {
     getUserById(postId).then((data) => {
       const postObj = data[0];
-      setPostById(postObj)
+      setPostById(postObj);
     });
   }, [postId]);
-  console.log(postById)
+  console.log(postById);
 
   useEffect(() => {
     getPostChapter(selectedBook.id, chapter).then(setBookAndChapter);
@@ -60,10 +62,10 @@ export const EditPost = ({ currentUser }) => {
       setUpdatePosts(copy);
     }
   }, [currentUser]);
- 
+
   useEffect(() => {
-    setUpdatePosts(postById)
-  }, [postById])
+    setUpdatePosts(postById);
+  }, [postById]);
 
   const handleBookChange = (e) => {
     const bookId = e.target.value;
@@ -98,102 +100,110 @@ export const EditPost = ({ currentUser }) => {
   };
 
   const handleDelete = (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
     deletePost(postId).then(() => {
-      navigate(`/myposts`)
-    })
-  }
+      navigate(`/myposts`);
+    });
+  };
 
   return (
     <>
       <h2>Update Post</h2>
-      <form>
-        <h2>Book</h2>
-        <select
-          onChange={(e) => {
-            handleBookChange(e);
-            const copy = { ...updatePosts };
-            copy.bibleBookId = e.target.value;
-            setUpdatePosts(copy);
-          }}
-        >
-          <option>{postById.bibleBookId}</option>
-          {posts.books?.map((book) => {
-            return (
-              <option placeholder={postById.bibleBookId} value={book.id} key={book.id}>
-                {book.name}
-              </option>
-            );
-          })}
-        </select>
-        <h2>Chapter</h2>
-        <select
-          onChange={(e) => {
-            const chapter = e.target.value;
-            setChapter(parseInt(chapter));
-            const copy = { ...updatePosts };
-            copy.bibleChapterId = parseInt(chapter);
-            setUpdatePosts(copy);
-          }}
-        >
-          <option>{postById.bibleChapterId}</option>
-          {chapterArray.map((number) => {
-            return (
-              <option key={number} value={number}>
-                {number}
-              </option>
-            );
-          })}
-        </select>
+      <div className="createUpdatepost-container">
+        <form className="form-container">
+          <h2>Book</h2>
+          <Form.Select
+            onChange={(e) => {
+              handleBookChange(e);
+              const copy = { ...updatePosts };
+              copy.bibleBookId = e.target.value;
+              setUpdatePosts(copy);
+            }}
+          >
+            <option>{postById.bibleBookId}</option>
+            {posts.books?.map((book) => {
+              return (
+                <option
+                  placeholder={postById.bibleBookId}
+                  value={book.id}
+                  key={book.id}
+                >
+                  {book.name}
+                </option>
+              );
+            })}
+          </Form.Select>
+          <h2>Chapter</h2>
+          <Form.Select
+            onChange={(e) => {
+              const chapter = e.target.value;
+              setChapter(parseInt(chapter));
+              const copy = { ...updatePosts };
+              copy.bibleChapterId = parseInt(chapter);
+              setUpdatePosts(copy);
+            }}
+          >
+            <option>{postById.bibleChapterId}</option>
+            {chapterArray.map((number) => {
+              return (
+                <option key={number} value={number}>
+                  {number}
+                </option>
+              );
+            })}
+          </Form.Select>
 
-        <h2>Verse</h2>
-        <select
-          onChange={(e) => {
-            const chosenVerse = e.target.value;
-            setVerse(parseInt(chosenVerse));
-            const copy = { ...updatePosts };
-            copy.bibleVerseId = parseInt(chosenVerse);
-            setUpdatePosts(copy);
-          }}
-        >
-          <option>{postById.bibleVerseId}</option>
-          {verseArray.map((number) => {
-            return (
-              <option key={number} value={number}>
-                {number}
-              </option>
-            );
-          })}
-        </select>
+          <h2>Verse</h2>
+          <Form.Select
+            onChange={(e) => {
+              const chosenVerse = e.target.value;
+              setVerse(parseInt(chosenVerse));
+              const copy = { ...updatePosts };
+              copy.bibleVerseId = parseInt(chosenVerse);
+              setUpdatePosts(copy);
+            }}
+          >
+            <option>{postById.bibleVerseId}</option>
+            {verseArray.map((number) => {
+              return (
+                <option key={number} value={number}>
+                  {number}
+                </option>
+              );
+            })}
+          </Form.Select>
 
-        <h2>Title: </h2>
-        <input
-          placeholder="Enter Title"
-          type="text"
-          value={updatePosts.title}
-          onChange={(e) => {
-            const chosenTitle = e.target.value;
-            const copy = { ...updatePosts };
-            copy.title = chosenTitle;
-            setUpdatePosts(copy);
-          }}
-        ></input>
-        <h2>Description</h2>
-        <input
-          placeholder="Enter Description"
-          type="text"
-          value={updatePosts.body}
-          onChange={(e) => {
-            const chosenDesc = e.target.value;
-            const copy = { ...updatePosts };
-            copy.body = chosenDesc;
-            setUpdatePosts(copy);
-          }}
-        ></input>
-      </form>
-      <button onClick={handleSave}>Save Updates</button>
-      <button onClick={handleDelete}>Delete Post</button>
+          <h2>Title: </h2>
+          <Form.Control
+            placeholder="Enter Title"
+            type="text"
+            value={updatePosts.title}
+            onChange={(e) => {
+              const chosenTitle = e.target.value;
+              const copy = { ...updatePosts };
+              copy.title = chosenTitle;
+              setUpdatePosts(copy);
+            }}
+          ></Form.Control>
+          <h2>Description</h2>
+          <Form.Control
+            placeholder="Enter Description"
+            type="text"
+            value={updatePosts.body}
+            onChange={(e) => {
+              const chosenDesc = e.target.value;
+              const copy = { ...updatePosts };
+              copy.body = chosenDesc;
+              setUpdatePosts(copy);
+            }}
+          ></Form.Control>
+        </form>
+        <div className="button-editpost">
+          <Button onClick={handleSave}>Save Updates</Button>
+          <Button onClick={handleDelete}>Delete Post</Button>
+        </div>
+      </div>
     </>
   );
 };
