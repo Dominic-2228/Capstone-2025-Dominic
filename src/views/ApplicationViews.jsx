@@ -12,6 +12,7 @@ import { CommentPost } from "../components/Comment/Comment.jsx";
 import { CreateComment } from "../components/Comment/CreateComment.jsx";
 import { AboutUs } from "../components/AboutUs/AboutUs.jsx";
 import { FaqJSX } from "../components/FAQ/Faq.jsx";
+import { Bible } from "../components/Bible/Bible.jsx";
 
 export const ApplicationViews = () => {
   const [currentUser, setCurrentUser] = useState({});
@@ -46,6 +47,7 @@ export const ApplicationViews = () => {
           <Route path="/createcomment/:postId" element={<CreateComment currentUser={currentUser}/>}/>
           <Route path="/aboutus" element={<AboutUs/>}/>
           <Route path="faq" element={<FaqJSX/>}/>
+          <Route path="bible" element={<Bible/>}/>
         </Route>
       </Routes>
     </>

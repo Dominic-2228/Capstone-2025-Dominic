@@ -1,30 +1,35 @@
-import { useEffect, useState } from "react"
-import { getPostBookTranslation, getPostChapter } from "../services/apiCall.jsx"
+import { useEffect, useState } from "react";
+import {
+  getPostBookTranslation,
+  getPostChapter,
+} from "../services/apiCall.jsx";
+import Form from "react-bootstrap/Form";
 
 export const Bible = () => {
-  const [bibleBook, setBibleBook] = useState([])
-  const [bibleChapter, setBibleChapter] = useState([])
-  const [chapterArray, setChapterArray] = useState([])
-  const [selectedBookAndChapter,setSelectedBookAndChapter] = useState([])
-
-
-  useEffect(() => {
-    getPostBookTranslation().then(setBibleBook)
-  },[])
+  const [bibleBook, setBibleBook] = useState([]);
+  const [chosenBook, setChosenBook] = useState("");
+  const [bibleChapter, setBibleChapter] = useState(0);
+  const [chapterArray, setChapterArray] = useState([]);
+  const [selectedBookAndChapter, setSelectedBookAndChapter] = useState([]);
 
   useEffect(() => {
-    
-  }, [bibleBook])
+    getPostBookTranslation().then(setBibleBook);
+  }, []);
+
+  useEffect(() => {}, [bibleBook]);
 
   useEffect(() => {
-    getPostChapter(bibleBook, bibleChapter).then(setSelectedBookAndChapter)
-  }, [])
+    if (chosenBook && chosenBook) {
+      getPostChapter(chosenBook.id, bibleChapter).then(
+        setSelectedBookAndChapter
+      );
+    }
+  }, [bibleChapter, chosenBook]);
 
-
-    const handleBookChange = (e) => {
+  const handleBookChange = (e) => {
     const bookId = e.target.value;
     const book = bibleBook.books.find((book) => book.id === bookId);
-    setBibleBook(book);
+    setChosenBook(book);
 
     if (book?.numberOfChapters) {
       const chapterArray = Array.from(
@@ -34,17 +39,19 @@ export const Bible = () => {
       setChapterArray(chapterArray);
     }
   };
-  
-  return (<>
 
-          <h2>Book</h2>
-        <Form.Select aria-label="Default select example"
+  return (
+    <>
+      <div>
+        <h2>Book</h2>
+        <Form.Select
+          aria-label="Default select example"
           onChange={(e) => {
             handleBookChange(e);
           }}
         >
           <option>Choose a Book</option>
-          {selectedBookAndChapter.books?.map((book) => {
+          {bibleBook.books?.map((book) => {
             return (
               <option value={book.id} key={book.id}>
                 {book.name}
@@ -53,7 +60,8 @@ export const Bible = () => {
           })}
         </Form.Select>
         <h2>Chapter</h2>
-        <Form.Select aria-label="Default select example"
+        <Form.Select
+          aria-label="Default select example"
           onChange={(e) => {
             const chapter = e.target.value;
             setBibleChapter(parseInt(chapter));
@@ -67,11 +75,27 @@ export const Bible = () => {
               </option>
             );
           })}
+
+          {console.log(setSelectedBookAndChapter)}
+
+          {console.log(selectedBookAndChapter)}
         </Form.Select>
-
-  {bibleChapter.map((book) => {
-
-  })}
-  
-  </>)
-}
+        <div className="bible-reading">
+        {selectedBookAndChapter.book?.name}
+        {selectedBookAndChapter.chapter?.content
+          ?.filter((verse) => verse.hasOwnProperty("number"))
+          .map((verse) => (
+            <p>
+              <strong>{verse.number}</strong>
+              {verse.content
+                .map((part, index) =>
+                  typeof part === "string" ? part : part.text || ""
+                )
+                .join("")}
+            </p>
+          ))}
+          </div>
+      </div>
+    </>
+  );
+};
