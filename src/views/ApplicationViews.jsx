@@ -10,6 +10,8 @@ import { Support } from "../components/Support/Support.jsx";
 import { LikedPost } from "../components/LikedPost/LikedPost.jsx";
 import { CommentPost } from "../components/Comment/Comment.jsx";
 import { CreateComment } from "../components/Comment/CreateComment.jsx";
+import { AboutUs } from "../components/AboutUs/AboutUs.jsx";
+import { FaqJSX } from "../components/FAQ/Faq.jsx";
 
 export const ApplicationViews = () => {
   const [currentUser, setCurrentUser] = useState({});
@@ -42,6 +44,8 @@ export const ApplicationViews = () => {
           <Route path="/likedposts" element={<LikedPost currentUser={currentUser} />} />
           <Route path="/comment/:postId" element={<CommentPost currentUser={currentUser}/>}/>
           <Route path="/createcomment/:postId" element={<CreateComment currentUser={currentUser}/>}/>
+          <Route path="/aboutus" element={<AboutUs/>}/>
+          <Route path="faq" element={<FaqJSX/>}/>
         </Route>
       </Routes>
     </>

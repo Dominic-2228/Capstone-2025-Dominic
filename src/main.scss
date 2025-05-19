@@ -1,19 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap");
 
-$font-family-base: 'Noto Serif', serif;
+$font-family-base: "Noto Serif", serif;
 $primary: #b06230;
 $secondary: #052f69;
 $gradient-light: (
-  'background': linear-gradient(45deg, #0d0301, #064884),
-  'color': white
+  "background": linear-gradient(45deg, #0d0301, #064884),
+  "color": white,
 );
 
 body {
   background: linear-gradient(65deg, #0d0301, #052f69);
   @keyframes appear {
-    from{
+    from {
       opacity: 0;
-      scale: 0.5
+      scale: 0.5;
     }
     to {
       opacity: 1;
@@ -21,6 +21,10 @@ body {
     }
   }
   overflow-x: hidden;
+}
+.button-icon {
+  height: 32px;
+  width: 32px;
 }
 
 .home-container {
@@ -50,25 +54,24 @@ body {
   text-align: center;
 }
 
-  @media (max-width: 600px) {
-    .home-text {
-      font-size: 1rem;
-      top: 5%;
-
-    }
+@media (max-width: 600px) {
+  .home-text {
+    font-size: 1rem;
+    top: 5%;
   }
-
-.linebreak {
- display: flex;
- justify-content: center;
- align-items: center;
- margin: 5rem;
- font-size: 3rem;
- color: white;
- border-bottom: solid black 3px;
 }
 
-.oversea-works{
+.linebreak {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5rem;
+  font-size: 3rem;
+  color: white;
+  border-bottom: solid black 3px;
+}
+
+.oversea-works {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -86,17 +89,21 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   max-width: 100%;
   width: 100vw;
+  gap: 60px;
 }
 
 .allPost-idv {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 3rem;
-  border-bottom: solid black 2px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  margin: 20px;
+  padding: 1rem;
+  height: auto;
+  border-radius: 8px;
 }
 
 .container-login {
@@ -121,13 +128,13 @@ body {
   color: white;
 }
 
-.bible-logo{
+.bible-logo {
   display: flex;
   justify-content: end;
   width: 8rem;
 }
 
-.createUpdatepost-container{
+.createUpdatepost-container {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -136,11 +143,11 @@ body {
   width: 100vw;
 }
 
-.form-container{
+.form-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column; 
+  flex-direction: column;
   border-bottom: $primary solid 1px;
   color: white;
 }
@@ -153,7 +160,7 @@ body {
   gap: 15px;
 }
 
-.create-comment{
+.create-comment {
   display: flex;
   justify-content: start;
   align-items: center;
@@ -168,5 +175,72 @@ body {
   gap: 4px;
 }
 
+.aboutus-container {
+  height: 100vw;
+  width: 100vw;
+  color: white;
+}
+
+.image-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.aboutus-img {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+
+.aboutus-p {
+  position: absolute;
+  font-size: 2rem;
+  text-shadow: 1px 1px 5px #b06230;
+  top: 100%;
+  left: 5%;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.h2Img-container {
+  position: relative;
+  width: 100%;
+}
+
+.aboutus-header {
+  position: absolute;
+  font-size: 4rem;
+  text-shadow: 1px 1px 5px #b06230;
+  top: 10%;
+  left: 5%;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.img-faq {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+
+.pImg-container {
+  position: relative;
+  width: 100%;
+}
+
+.faq-p {
+  position: absolute;
+  top: 10%;
+  left: 2%;
+  font-size: 3rem;
+  color: white;
+  text-shadow: 1px 1px 5px #b06230
+
+}
 
 @import "../node_modules/bootstrap/scss/bootstrap.scss";

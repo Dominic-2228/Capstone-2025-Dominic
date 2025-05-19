@@ -28,7 +28,13 @@
       "bibleVerseId": 31,
       "userId": 4,
       "feelingId": 1,
-      "likes": 4
+      "likes": 6,
+      "user": {
+        "id": 4,
+        "fullName": "Liam Carter",
+        "email": "liam.carter@example.com",
+        "isStaff": false
+      }
     },
     {
       "id": 5,
@@ -267,9 +273,15 @@
       "bibleChapterId": 4,
       "bibleVerseId": 2,
       "userId": 6,
-      "likes": 0,
+      "likes": 8,
       "date": "2025-05-15T19:54:29.338Z",
-      "id": 24
+      "id": 24,
+      "user": {
+        "id": 6,
+        "fullName": "Noah Parker",
+        "email": "noah.parker@example.com",
+        "isStaff": false
+      }
     }
   ],
   "users": [
