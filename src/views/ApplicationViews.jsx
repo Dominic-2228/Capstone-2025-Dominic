@@ -31,7 +31,7 @@ export const ApplicationViews = () => {
           path="/"
           element={
             <>
-              <NavBar />
+              <NavBar currentUser={currentUser}/>
               <Outlet />
             </>
           }
@@ -47,7 +47,7 @@ export const ApplicationViews = () => {
           <Route path="/createcomment/:postId" element={<CreateComment currentUser={currentUser}/>}/>
           <Route path="/aboutus" element={<AboutUs/>}/>
           <Route path="faq" element={<FaqJSX/>}/>
-          <Route path="bible" element={<Bible/>}/>
+          <Route path="bible" element={<Bible currentUser={currentUser}/>}/>
         </Route>
       </Routes>
     </>

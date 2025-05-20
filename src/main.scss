@@ -141,6 +141,7 @@ body {
   justify-content: center;
   max-width: 100%;
   width: 100vw;
+  color: white;
 }
 
 .form-container {
@@ -155,9 +156,19 @@ body {
 .button-editpost {
   display: flex;
   justify-content: center;
+  flex-direction: row;
+  gap: 3px;
+  text-align: center;
+}
+
+.button-icon-edit {
+  width: 2rem;
+  height: 15px;
+  text-align: center;
+  display: flex;
   flex-direction: column;
-  margin-bottom: 30px;
-  gap: 15px;
+  align-items: center;
+  justify-content: center;
 }
 
 .create-comment {
@@ -239,12 +250,48 @@ body {
   left: 2%;
   font-size: 3rem;
   color: white;
-  text-shadow: 1px 1px 5px #b06230
-
+  text-shadow: 1px 1px 5px #b06230;
 }
 
 .bible-reading {
   color: white;
 }
 
+.book-name {
+  font-size: 2rem;
+}
+
+.bible-reading-selection {
+  max-height: 200px;
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+.bible-reading-container {
+  max-width: 100%;
+  width: 100vw;
+  max-height: 100%;
+  height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+.bible-reading-content {
+  color: white;
+  margin: 15px;
+}
+
+.profile-photo {
+  border-radius: 50%;
+}
+
+.offcanvas-profile {
+  background: linear-gradient(180deg, #0d0301, #064884);
+}
+
+.offcanvas-details {
+  color: white;
+}
 @import "../node_modules/bootstrap/scss/bootstrap.scss";

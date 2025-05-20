@@ -10,13 +10,7 @@
       "bibleVerseId": 8,
       "userId": 3,
       "feelingId": 2,
-      "likes": 6,
-      "user": {
-        "id": 3,
-        "fullName": "Ethan Brooks",
-        "email": "ethan.brooks@example.com",
-        "isStaff": false
-      }
+      "likes": 7
     },
     {
       "id": 4,
@@ -28,12 +22,13 @@
       "bibleVerseId": 31,
       "userId": 4,
       "feelingId": 1,
-      "likes": 6,
+      "likes": 7,
       "user": {
         "id": 4,
         "fullName": "Liam Carter",
         "email": "liam.carter@example.com",
-        "isStaff": false
+        "isStaff": false,
+        "profilePhoto": "https://randomuser.me/api/portraits/men/4.jpg"
       }
     },
     {
@@ -154,13 +149,7 @@
       "bibleVerseId": 1,
       "userId": 14,
       "feelingId": 2,
-      "likes": 5,
-      "user": {
-        "id": 14,
-        "fullName": "Henry Rivera",
-        "email": "henry.rivera@example.com",
-        "isStaff": false
-      }
+      "likes": 5
     },
     {
       "id": 15,
@@ -235,38 +224,6 @@
       "likes": 4
     },
     {
-      "title": "Genesis 1:1 — In The Beginning",
-      "body": "This reminded me that everything starts with God.",
-      "bibleBookId": "GEN",
-      "bibleChapterId": 1,
-      "bibleVerseId": 1,
-      "userId": 1,
-      "likes": 0,
-      "date": "2025-05-13T19:32:32.863Z",
-      "id": 21
-    },
-    {
-      "title": "This was a great passage",
-      "body": "Greatness",
-      "bibleBookId": "JDG",
-      "bibleChapterId": 13,
-      "bibleVerseId": 28,
-      "userId": 1,
-      "likes": 0,
-      "date": "2025-05-13T20:11:11.637Z",
-      "id": 22
-    },
-    {
-      "title": "Just Before Passover",
-      "body": "Type of Baptism in Jesus Name",
-      "bibleBookId": "EXO",
-      "bibleChapterId": 2,
-      "bibleVerseId": 10,
-      "userId": 1,
-      "likes": 0,
-      "id": 23
-    },
-    {
       "title": "There is only one Throne",
       "body": "This shows that Jesus is Alpha and Omega, He is God",
       "bibleBookId": "REV",
@@ -275,13 +232,18 @@
       "userId": 6,
       "likes": 8,
       "date": "2025-05-15T19:54:29.338Z",
-      "id": 24,
-      "user": {
-        "id": 6,
-        "fullName": "Noah Parker",
-        "email": "noah.parker@example.com",
-        "isStaff": false
-      }
+      "id": 24
+    },
+    {
+      "title": "No man in all the earth?",
+      "body": "Why would the daughters of Lot take such a drastic mindset?",
+      "bibleBookId": "GEN",
+      "bibleChapterId": 19,
+      "bibleVerseId": 31,
+      "userId": 1,
+      "likes": 0,
+      "date": "2025-05-20T01:39:37.348Z",
+      "id": 25
     }
   ],
   "users": [
@@ -289,127 +251,148 @@
       "id": 1,
       "fullName": "Dom Till",
       "email": "nunyas@nope.com",
-      "isStaff": true
+      "isStaff": true,
+      "profilePhoto": "IMG/DSC_4587 (1).jpg"
     },
     {
       "id": 2,
       "fullName": "Ava Thompson",
       "email": "ava.thompson@example.com",
-      "isStaff": false
+      "isStaff": false,
+      "profilePhoto": "https://randomuser.me/api/portraits/women/2.jpg"
     },
     {
       "id": 3,
       "fullName": "Ethan Brooks",
       "email": "ethan.brooks@example.com",
-      "isStaff": false
+      "isStaff": false,
+      "profilePhoto": "https://randomuser.me/api/portraits/men/3.jpg"
     },
     {
       "id": 4,
       "fullName": "Liam Carter",
       "email": "liam.carter@example.com",
-      "isStaff": false
+      "isStaff": false,
+      "profilePhoto": "https://randomuser.me/api/portraits/men/4.jpg"
     },
     {
       "id": 5,
       "fullName": "Sophia Miller",
       "email": "sophia.miller@example.com",
-      "isStaff": false
+      "isStaff": false,
+      "profilePhoto": "https://randomuser.me/api/portraits/women/5.jpg"
     },
     {
       "id": 6,
       "fullName": "Noah Parker",
       "email": "noah.parker@example.com",
-      "isStaff": false
+      "isStaff": false,
+      "profilePhoto": "https://randomuser.me/api/portraits/men/6.jpg"
     },
     {
       "id": 7,
       "fullName": "Mia Clark",
       "email": "mia.clark@example.com",
-      "isStaff": false
+      "isStaff": false,
+      "profilePhoto": "https://randomuser.me/api/portraits/women/7.jpg"
     },
     {
       "id": 8,
       "fullName": "Jackson Lee",
       "email": "jackson.lee@example.com",
-      "isStaff": false
+      "isStaff": false,
+      "profilePhoto": "https://randomuser.me/api/portraits/men/8.jpg"
     },
     {
       "id": 9,
       "fullName": "Isabella White",
       "email": "isabella.white@example.com",
-      "isStaff": false
+      "isStaff": false,
+      "profilePhoto": "https://randomuser.me/api/portraits/women/9.jpg"
     },
     {
       "id": 10,
       "fullName": "Benjamin Hall",
       "email": "ben.hall@example.com",
-      "isStaff": false
+      "isStaff": false,
+      "profilePhoto": "https://randomuser.me/api/portraits/men/10.jpg"
     },
     {
       "id": 11,
       "fullName": "Emily Adams",
       "email": "emily.adams@example.com",
-      "isStaff": false
+      "isStaff": false,
+      "profilePhoto": "https://randomuser.me/api/portraits/women/11.jpg"
     },
     {
       "id": 12,
       "fullName": "Lucas Scott",
       "email": "lucas.scott@example.com",
-      "isStaff": false
+      "isStaff": false,
+      "profilePhoto": "https://randomuser.me/api/portraits/men/12.jpg"
     },
     {
       "id": 13,
       "fullName": "Aria Nelson",
       "email": "aria.nelson@example.com",
-      "isStaff": false
+      "isStaff": false,
+      "profilePhoto": "https://randomuser.me/api/portraits/women/13.jpg"
     },
     {
       "id": 14,
       "fullName": "Henry Rivera",
       "email": "henry.rivera@example.com",
-      "isStaff": false
+      "isStaff": false,
+      "profilePhoto": "https://randomuser.me/api/portraits/men/14.jpg"
     },
     {
       "id": 15,
       "fullName": "Grace Mitchell",
       "email": "grace.mitchell@example.com",
-      "isStaff": false
+      "isStaff": false,
+      "profilePhoto": "https://randomuser.me/api/portraits/women/15.jpg"
     },
     {
       "id": 16,
       "fullName": "Daniel Turner",
       "email": "daniel.turner@example.com",
-      "isStaff": false
+      "isStaff": false,
+      "profilePhoto": "https://randomuser.me/api/portraits/men/16.jpg"
     },
     {
       "id": 17,
       "fullName": "Chloe Young",
       "email": "chloe.young@example.com",
-      "isStaff": false
+      "isStaff": false,
+      "profilePhoto": "https://randomuser.me/api/portraits/women/17.jpg"
     },
     {
       "id": 18,
       "fullName": "Sebastian Flores",
       "email": "sebastian.flores@example.com",
-      "isStaff": false
+      "isStaff": false,
+      "profilePhoto": "https://randomuser.me/api/portraits/men/18.jpg"
     },
     {
       "id": 19,
       "fullName": "Lily Ramirez",
       "email": "lily.ramirez@example.com",
-      "isStaff": false
+      "isStaff": false,
+      "profilePhoto": "https://randomuser.me/api/portraits/women/19.jpg"
     },
     {
       "id": 20,
       "fullName": "Owen Bennett",
       "email": "owen.bennett@example.com",
-      "isStaff": false
+      "isStaff": false,
+      "profilePhoto": "https://randomuser.me/api/portraits/men/20.jpg"
     },
     {
       "id": 21,
       "fullName": "Zoe Collins",
       "email": "zoe.collins@example.com",
-      "isStaff": false
+      "isStaff": false,
+      "profilePhoto": "https://randomuser.me/api/portraits/women/21.jpg"
     }
   ],
   "feelings": [
@@ -912,18 +895,6 @@
       "postId": 20
     },
     {
-      "id": 19,
-      "body": "Beautiful reminder that everything starts with God.",
-      "userId": 2,
-      "postId": 21
-    },
-    {
-      "id": 20,
-      "body": "Greatness indeed — short and powerful!",
-      "userId": 20,
-      "postId": 22
-    },
-    {
       "id": 24,
       "body": "God used this verse to remind me He's in control.",
       "userId": 6,
@@ -1036,6 +1007,44 @@
       "userId": 1,
       "postId": 3,
       "id": 42
+    }
+  ],
+  "notes": [
+    {
+      "userId": 1,
+      "verseId": 31,
+      "chapterId": 19,
+      "bookId": "GEN",
+      "title": "No man in the Whole Earth?",
+      "body": "They were blinded by their current situation and overexaggerated.  ",
+      "id": 1
+    },
+    {
+      "userId": 1,
+      "verseId": 1,
+      "chapterId": 1,
+      "bookId": "GEN",
+      "title": "This is the",
+      "body": "beginiing",
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "verseId": 1,
+      "chapterId": 9,
+      "bookId": "1KI",
+      "title": "All \"he\" desired to do",
+      "body": "God may have had more for Him to do",
+      "id": 3
+    },
+    {
+      "userId": 1,
+      "verseId": 27,
+      "chapterId": 1,
+      "bookId": "GEN",
+      "title": "God was speaking to the angels",
+      "body": "This was not a 3 divine persons complex. it was One God",
+      "id": 4
     }
   ]
 }
