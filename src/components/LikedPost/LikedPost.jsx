@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getLikedPosts, likePostPut } from "../services/AllPostServices.jsx";
+import { getLikedPosts } from "../services/AllPostServices.jsx";
 import { Button, Card } from "react-bootstrap";
 import ListGroup from "react-bootstrap/ListGroup";
 import { useNavigate } from "react-router-dom";
@@ -39,7 +39,7 @@ export const LikedPost = ({ currentUser }) => {
                   </Card.Body>
                   <ListGroup className="list-group-flush">
                     <ListGroup.Item>
-                      Posted By: {post.user.fullName}
+                      Posted By: {post.post.user.fullName}
                     </ListGroup.Item>
                     <ListGroup.Item>
                       Book: {post.post.bibleBookId}

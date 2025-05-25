@@ -2,13 +2,14 @@ import { useEffect, useState } from "react";
 import {
   getPostBookTranslation,
   getPostChapter,
+  getWordDictionary,
 } from "../services/apiCall.jsx";
 import Form from "react-bootstrap/Form";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
-import { saveUpdatedNote } from "../services/AllPostServices.jsx";
+import { deleteNote, saveUpdatedNote } from "../services/AllPostServices.jsx";
 import { getNotesByUserId } from "../services/userService.jsx";
-import { Card, Offcanvas } from "react-bootstrap";
+import { Card, InputGroup, Offcanvas } from "react-bootstrap";
 
 export const Bible = ({ currentUser }) => {
   const [bibleBook, setBibleBook] = useState([]);
@@ -23,6 +24,9 @@ export const Bible = ({ currentUser }) => {
   const [noteForPage, setNoteForPage] = useState([]);
   const [render, setRender] = useState(false);
   const [showBar, setShowBar] = useState(false);
+  const [showWordDef, setShowWordDef] = useState(false);
+  const [word, setWord] = useState("");
+  const [dictionary, setDictionary] = useState([]);
 
   const handleCloseSideBar = () => setShowBar(false);
   const handleShowSideBar = () => setShowBar(true);
@@ -80,8 +84,76 @@ export const Bible = ({ currentUser }) => {
     });
   };
 
+  const handleDictionary = (e) => {
+    if (e.key === "Enter") {
+      getWordDictionary(word).then(setDictionary);
+      setShowWordDef(true);
+    }
+  };
+
+
+  const handleDeleteNote = (e) => {
+    deleteNote(e).then(() => {
+      setRender((prev) => !prev)
+    })
+  }
+
   return (
     <>
+      <div className="bible-reading-container">
+        <div className="bible-reading-content">
+          <div className="bible-reading-selection">
+            <h3>Dictionary Search</h3>
+            <InputGroup size="sm" className="mb-3">
+              <InputGroup.Text id="inputGroup-sizing-sm"></InputGroup.Text>
+              <Form.Control
+                aria-label="Small"
+                aria-describedby="inputGroup-sizing-sm"
+                onKeyDown={handleDictionary}
+                onChange={(e) => {
+                  setWord(e.target.value);
+                }}
+              />
+            </InputGroup>
+            {dictionary.length > 0
+              ? dictionary.map((entry, index) => (
+                  <Modal
+                    key={index}
+                    show={showWordDef}
+                    onHide={() => setShowWordDef(false)}
+                    size="lg"
+                    aria-labelledby="contained-modal-title-vcenter"
+                    centered
+                  >
+                    <Modal.Header closeButton>
+                      <Modal.Title id="contained-modal-title-vcenter">
+                        {word || "Modal heading"}
+                      </Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                      <h4>{word || "Centered Modal"}</h4>
+                      {entry.meanings.map((meaning, index) => (
+                        <div key={index}>
+                          <h3>{meaning.partOfSpeech}</h3>
+                          <p>
+                            {meaning.definitions
+                              .map((def, i) => def.definition)
+                              .join(" ")}
+                          </p>
+                        </div>
+                      )) || <p>Definition not available.</p>}
+                    </Modal.Body>
+                    <Modal.Footer>
+                      <Button onClick={() => setShowWordDef(false)}>
+                        Close
+                      </Button>
+                    </Modal.Footer>
+                  </Modal>
+                ))
+              : ""}
+          </div>
+        </div>
+      </div>
       <div className="bible-reading-container">
         <div className="bible-reading-content">
           <div className="bible-reading-selection">
@@ -101,8 +173,55 @@ export const Bible = ({ currentUser }) => {
                 );
               })}
             </Form.Select>
-            <h2>Chapter</h2>
-            <Form.Select
+            <h3>
+              {" "}
+              {bibleChapter ? (
+                <div className="button-icon-edit-chapter">
+                  <svg onClick={() => {
+                    setBibleChapter(bibleChapter - 1)
+                  }}
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="size-6"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
+                    />
+                  </svg>
+                </div>
+              ) : (
+                ""
+              )} 
+              {" "}Chapter {" "}
+              {bibleChapter < chapterArray.length ? (
+                <div className="button-icon-edit-chapter">
+                  <svg onClick={() => {
+                    setBibleChapter(bibleChapter + 1)
+                  }}
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="size-6"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                    />
+                  </svg>
+                </div>
+              ) : (
+                ""
+              )}
+            </h3>
+            <Form.Select value={bibleChapter}
               aria-label="Default select example"
               onChange={(e) => {
                 const chapter = e.target.value;
@@ -113,7 +232,7 @@ export const Bible = ({ currentUser }) => {
               {chapterArray.map((number) => {
                 return (
                   <option key={number} value={number}>
-                    {number}
+                    {number || bibleChapter}
                   </option>
                 );
               })}
@@ -172,7 +291,7 @@ export const Bible = ({ currentUser }) => {
                           as="textarea"
                           rows={3}
                           placeholder="Add Further Details"
-                          onChange={(e) => [setNoteBody(e.target.value)]}
+                          onChange={(e) => {setNoteBody(e.target.value)}}
                         />
                       </Form.Group>
                     </Form>
@@ -230,6 +349,9 @@ export const Bible = ({ currentUser }) => {
                           <Card.Text>Book: {note.bookId}</Card.Text>
                           <Card.Text>Chapter: {note.chapterId}</Card.Text>
                           <Card.Text>Verse: {note.verseId}</Card.Text>
+                          <Button onClick={() => {
+                            handleDeleteNote(note.id)
+                          }}>Delete</Button>
                         </Card.Body>
                       </Card>
                     ))}

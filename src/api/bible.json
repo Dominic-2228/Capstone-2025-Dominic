@@ -10,7 +10,14 @@
       "bibleVerseId": 8,
       "userId": 3,
       "feelingId": 2,
-      "likes": 7
+      "likes": 12,
+      "user": {
+        "id": 3,
+        "fullName": "Ethan Brooks",
+        "email": "ethan.brooks@example.com",
+        "isStaff": false,
+        "profilePhoto": "https://randomuser.me/api/portraits/men/3.jpg"
+      }
     },
     {
       "id": 4,
@@ -22,7 +29,7 @@
       "bibleVerseId": 31,
       "userId": 4,
       "feelingId": 1,
-      "likes": 7,
+      "likes": 9,
       "user": {
         "id": 4,
         "fullName": "Liam Carter",
@@ -41,7 +48,14 @@
       "bibleVerseId": 5,
       "userId": 5,
       "feelingId": 2,
-      "likes": 4
+      "likes": 5,
+      "user": {
+        "id": 5,
+        "fullName": "Sophia Miller",
+        "email": "sophia.miller@example.com",
+        "isStaff": false,
+        "profilePhoto": "https://randomuser.me/api/portraits/women/5.jpg"
+      }
     },
     {
       "id": 6,
@@ -53,7 +67,14 @@
       "bibleVerseId": 10,
       "userId": 6,
       "feelingId": 1,
-      "likes": 4
+      "likes": 7,
+      "user": {
+        "id": 6,
+        "fullName": "Noah Parker",
+        "email": "noah.parker@example.com",
+        "isStaff": false,
+        "profilePhoto": "https://randomuser.me/api/portraits/men/6.jpg"
+      }
     },
     {
       "id": 7,
@@ -65,7 +86,14 @@
       "bibleVerseId": 13,
       "userId": 7,
       "feelingId": 2,
-      "likes": 4
+      "likes": 5,
+      "user": {
+        "id": 7,
+        "fullName": "Mia Clark",
+        "email": "mia.clark@example.com",
+        "isStaff": false,
+        "profilePhoto": "https://randomuser.me/api/portraits/women/7.jpg"
+      }
     },
     {
       "id": 8,
@@ -77,7 +105,14 @@
       "bibleVerseId": 4,
       "userId": 8,
       "feelingId": 1,
-      "likes": 4
+      "likes": 5,
+      "user": {
+        "id": 8,
+        "fullName": "Jackson Lee",
+        "email": "jackson.lee@example.com",
+        "isStaff": false,
+        "profilePhoto": "https://randomuser.me/api/portraits/men/8.jpg"
+      }
     },
     {
       "id": 9,
@@ -89,7 +124,14 @@
       "bibleVerseId": 22,
       "userId": 9,
       "feelingId": 2,
-      "likes": 4
+      "likes": 5,
+      "user": {
+        "id": 9,
+        "fullName": "Isabella White",
+        "email": "isabella.white@example.com",
+        "isStaff": false,
+        "profilePhoto": "https://randomuser.me/api/portraits/women/9.jpg"
+      }
     },
     {
       "id": 10,
@@ -101,7 +143,14 @@
       "bibleVerseId": 10,
       "userId": 10,
       "feelingId": 1,
-      "likes": 4
+      "likes": 6,
+      "user": {
+        "id": 10,
+        "fullName": "Benjamin Hall",
+        "email": "ben.hall@example.com",
+        "isStaff": false,
+        "profilePhoto": "https://randomuser.me/api/portraits/men/10.jpg"
+      }
     },
     {
       "id": 11,
@@ -113,18 +162,6 @@
       "bibleVerseId": 33,
       "userId": 11,
       "feelingId": 2,
-      "likes": 4
-    },
-    {
-      "id": 12,
-      "title": "Freedom in Galatians 5:1",
-      "body": "Christ set me free — I won't go back to bondage.",
-      "date": "2025-05-08T10:10:00+0000",
-      "bibleBookId": "GAL",
-      "bibleChapterId": 5,
-      "bibleVerseId": 1,
-      "userId": 12,
-      "feelingId": 1,
       "likes": 4
     },
     {
@@ -185,7 +222,14 @@
       "bibleVerseId": 7,
       "userId": 17,
       "feelingId": 1,
-      "likes": 4
+      "likes": 5,
+      "user": {
+        "id": 17,
+        "fullName": "Chloe Young",
+        "email": "chloe.young@example.com",
+        "isStaff": false,
+        "profilePhoto": "https://randomuser.me/api/portraits/women/17.jpg"
+      }
     },
     {
       "id": 18,
@@ -197,7 +241,14 @@
       "bibleVerseId": 18,
       "userId": 18,
       "feelingId": 1,
-      "likes": 4
+      "likes": 5,
+      "user": {
+        "id": 18,
+        "fullName": "Sebastian Flores",
+        "email": "sebastian.flores@example.com",
+        "isStaff": false,
+        "profilePhoto": "https://randomuser.me/api/portraits/men/18.jpg"
+      }
     },
     {
       "id": 19,
@@ -221,7 +272,14 @@
       "bibleVerseId": 6,
       "userId": 20,
       "feelingId": 2,
-      "likes": 4
+      "likes": 5,
+      "user": {
+        "id": 20,
+        "fullName": "Owen Bennett",
+        "email": "owen.bennett@example.com",
+        "isStaff": false,
+        "profilePhoto": "https://randomuser.me/api/portraits/men/20.jpg"
+      }
     },
     {
       "title": "There is only one Throne",
@@ -230,9 +288,16 @@
       "bibleChapterId": 4,
       "bibleVerseId": 2,
       "userId": 6,
-      "likes": 8,
+      "likes": 9,
       "date": "2025-05-15T19:54:29.338Z",
-      "id": 24
+      "id": 24,
+      "user": {
+        "id": 6,
+        "fullName": "Noah Parker",
+        "email": "noah.parker@example.com",
+        "isStaff": false,
+        "profilePhoto": "https://randomuser.me/api/portraits/men/6.jpg"
+      }
     },
     {
       "title": "No man in all the earth?",
@@ -244,6 +309,17 @@
       "likes": 0,
       "date": "2025-05-20T01:39:37.348Z",
       "id": 25
+    },
+    {
+      "title": "Mind of Christ",
+      "body": "Philippians 2:4, So let this Mind, Spiritual Mind be in us. let us Mind the Things of God",
+      "bibleBookId": "ROM",
+      "bibleChapterId": 8,
+      "bibleVerseId": 5,
+      "userId": 1,
+      "likes": 0,
+      "date": "2025-05-22T18:49:09.045Z",
+      "id": 26
     }
   ],
   "users": [
@@ -474,11 +550,6 @@
       "userId": 19
     },
     {
-      "id": 12,
-      "postId": 5,
-      "userId": 1
-    },
-    {
       "id": 13,
       "postId": 5,
       "userId": 13
@@ -604,26 +675,6 @@
       "userId": 20
     },
     {
-      "id": 38,
-      "postId": 12,
-      "userId": 16
-    },
-    {
-      "id": 39,
-      "postId": 12,
-      "userId": 7
-    },
-    {
-      "id": 40,
-      "postId": 12,
-      "userId": 10
-    },
-    {
-      "id": 41,
-      "postId": 12,
-      "userId": 2
-    },
-    {
       "id": 42,
       "postId": 13,
       "userId": 6
@@ -642,11 +693,6 @@
       "id": 45,
       "postId": 13,
       "userId": 3
-    },
-    {
-      "id": 46,
-      "postId": 14,
-      "userId": 1
     },
     {
       "id": 47,
@@ -739,11 +785,6 @@
       "userId": 10
     },
     {
-      "id": 65,
-      "postId": 18,
-      "userId": 1
-    },
-    {
       "id": 66,
       "postId": 19,
       "userId": 17
@@ -782,6 +823,21 @@
       "id": 73,
       "postId": 20,
       "userId": 15
+    },
+    {
+      "postId": 3,
+      "userId": 1,
+      "id": 74
+    },
+    {
+      "postId": 5,
+      "userId": 1,
+      "id": 75
+    },
+    {
+      "postId": 4,
+      "userId": 1,
+      "id": 76
     }
   ],
   "postComments": [],
@@ -839,12 +895,6 @@
       "body": "Seek first — I needed this reminder today.",
       "userId": 12,
       "postId": 11
-    },
-    {
-      "id": 10,
-      "body": "Thank God for freedom in Christ!",
-      "userId": 6,
-      "postId": 12
     },
     {
       "id": 11,
@@ -949,12 +999,6 @@
       "postId": 11
     },
     {
-      "id": 33,
-      "body": "I'm grateful someone shared this with me once.",
-      "userId": 15,
-      "postId": 12
-    },
-    {
       "id": 34,
       "body": "This gives me strength every time I read it.",
       "userId": 17,
@@ -1030,21 +1074,66 @@
     },
     {
       "userId": 1,
-      "verseId": 1,
-      "chapterId": 9,
-      "bookId": "1KI",
-      "title": "All \"he\" desired to do",
-      "body": "God may have had more for Him to do",
-      "id": 3
-    },
-    {
-      "userId": 1,
       "verseId": 27,
       "chapterId": 1,
       "bookId": "GEN",
       "title": "God was speaking to the angels",
       "body": "This was not a 3 divine persons complex. it was One God",
       "id": 4
+    },
+    {
+      "userId": 1,
+      "verseId": 34,
+      "chapterId": 25,
+      "bookId": "GEN",
+      "title": "Birth Right",
+      "body": "He Gave Away something so valuable for something so temporal. ",
+      "id": 5
+    },
+    {
+      "userId": 1,
+      "verseId": 22,
+      "chapterId": 25,
+      "bookId": "GEN",
+      "title": "She inquired of the Lord",
+      "body": "Rebekah went to inquire of the Lord, but she had already been apart of the promise that God have abraham, and issac. sometimes we have to search deep, and go into inquiring of the Lord even when God promised us something",
+      "id": 6
+    },
+    {
+      "userId": 1,
+      "verseId": 11,
+      "chapterId": 29,
+      "bookId": "JER",
+      "title": "Love this verse",
+      "body": "one of favs",
+      "id": 7
+    },
+    {
+      "userId": 1,
+      "verseId": 1,
+      "chapterId": 40,
+      "bookId": "NUM",
+      "title": "",
+      "body": "",
+      "id": 8
+    },
+    {
+      "userId": 18,
+      "verseId": 6,
+      "chapterId": 24,
+      "bookId": "GEN",
+      "title": "",
+      "body": "",
+      "id": 9
+    },
+    {
+      "userId": 1,
+      "verseId": 17,
+      "chapterId": 10,
+      "bookId": "LEV",
+      "title": "",
+      "body": "",
+      "id": 10
     }
   ]
 }

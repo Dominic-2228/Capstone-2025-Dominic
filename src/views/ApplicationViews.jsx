@@ -13,6 +13,7 @@ import { CreateComment } from "../components/Comment/CreateComment.jsx";
 import { AboutUs } from "../components/AboutUs/AboutUs.jsx";
 import { FaqJSX } from "../components/FAQ/Faq.jsx";
 import { Bible } from "../components/Bible/Bible.jsx";
+import { CopyRight } from "../components/CopyrightFooter/CopyRight.jsx";
 
 export const ApplicationViews = () => {
   const [currentUser, setCurrentUser] = useState({});
@@ -33,6 +34,7 @@ export const ApplicationViews = () => {
             <>
               <NavBar currentUser={currentUser}/>
               <Outlet />
+              <CopyRight/>
             </>
           }
         >

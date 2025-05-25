@@ -2,13 +2,41 @@ import { useEffect, useState } from "react";
 import { getUserByUserId } from "../services/userService.jsx";
 import { Button, Card, ListGroup } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { getPostChapter } from "../services/apiCall.jsx";
 
 export const MyPost = ({ currentUser }) => {
   const [myPosts, setMyPosts] = useState([]);
+  const [selection, setSelection] = useState([]);
+  const [verse, setVerse] = useState("");
 
   useEffect(() => {
     getUserByUserId(currentUser.id).then(setMyPosts);
   }, [currentUser]);
+
+  // useEffect(() => {
+  //   myPosts.map((post) => {
+  //     return getPostChapter(post.bibleBookId, post.bibleChapterId).then(
+  //       setSelection
+  //     );
+  //   });
+  // }, [myPosts]);
+
+  // useEffect(() => {
+  //   if (!selection?.chapter?.content || !myPosts.length) {
+  //     return;
+  //   } else {
+  //     const matchingVerses = selection.chapter?.content.filter((verse) =>
+  //       myPosts.some((post) => verse.number === post.bibleVerseId)
+  //     );
+
+  //     const verseContent = matchingVerses
+  //       .find((verse) => verse.number === myPosts.bibleVerseId)
+  //       .content?.map((verse) => verse)
+  //       .join(" ");
+
+  //     setVerse(verseContent);
+  //   }
+  // }, [myPosts, selection.chapter?.content]);
 
   return (
     <>
@@ -26,7 +54,13 @@ export const MyPost = ({ currentUser }) => {
                     Posted By: {post.user.fullName}
                   </ListGroup.Item>
                   <ListGroup.Item>Book: {post.bibleBookId}</ListGroup.Item>
-                  <ListGroup.Item>Verse: {post.bibleVerseId}</ListGroup.Item>
+                  <ListGroup.Item>
+                    Chapter: {post.bibleChapterId}
+                  </ListGroup.Item>
+                  <ListGroup.Item>
+                    Verse Number: {post.bibleVerseId}
+                  </ListGroup.Item>
+                  {/* <ListGroup.Item>Content: {verse}</ListGroup.Item> */}
                   <ListGroup.Item>
                     Posted At: {new Date(post.date).toLocaleString()}
                   </ListGroup.Item>

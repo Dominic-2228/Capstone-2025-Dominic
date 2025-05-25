@@ -171,6 +171,21 @@ body {
   justify-content: center;
 }
 
+.button-icon-edit-chapter {
+  width: 2rem;
+  height: 15px;
+  display: inline-block;
+}
+
+.iframe-applecards {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vw;
+}
+
 .create-comment {
   display: flex;
   justify-content: start;
