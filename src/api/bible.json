@@ -143,7 +143,7 @@
       "bibleVerseId": 10,
       "userId": 10,
       "feelingId": 1,
-      "likes": 6,
+      "likes": 7,
       "user": {
         "id": 10,
         "fullName": "Benjamin Hall",
@@ -222,7 +222,7 @@
       "bibleVerseId": 7,
       "userId": 17,
       "feelingId": 1,
-      "likes": 5,
+      "likes": 6,
       "user": {
         "id": 17,
         "fullName": "Chloe Young",
@@ -320,6 +320,17 @@
       "likes": 0,
       "date": "2025-05-22T18:49:09.045Z",
       "id": 26
+    },
+    {
+      "title": "God's promise",
+      "body": "wow",
+      "bibleBookId": "JOL",
+      "bibleChapterId": 2,
+      "bibleVerseId": 28,
+      "userId": 1,
+      "likes": 0,
+      "date": "2025-06-02T14:30:14.897Z",
+      "id": 27
     }
   ],
   "users": [
@@ -838,6 +849,16 @@
       "postId": 4,
       "userId": 1,
       "id": 76
+    },
+    {
+      "postId": 10,
+      "userId": 1,
+      "id": 77
+    },
+    {
+      "postId": 17,
+      "userId": 1,
+      "id": 78
     }
   ],
   "postComments": [],
@@ -1051,6 +1072,12 @@
       "userId": 1,
       "postId": 3,
       "id": 42
+    },
+    {
+      "body": "wow",
+      "userId": 1,
+      "postId": 4,
+      "id": 43
     }
   ],
   "notes": [
@@ -1134,6 +1161,51 @@
       "title": "",
       "body": "",
       "id": 10
+    },
+    {
+      "userId": 6,
+      "verseId": 1,
+      "chapterId": 29,
+      "bookId": "GEN",
+      "title": "",
+      "body": "",
+      "id": 11
+    },
+    {
+      "userId": 6,
+      "verseId": 9,
+      "chapterId": 28,
+      "bookId": "GEN",
+      "title": "rebellion",
+      "body": "He knew that His father did not want them to have the wife of a cannanite, but Esau did it anyways? Why? rebellion",
+      "id": 12
+    },
+    {
+      "userId": 1,
+      "verseId": 9,
+      "chapterId": 28,
+      "bookId": "GEN",
+      "title": "rebellion",
+      "body": "Esau knew that it issac didnt want his sons to marry cannonites but he did it anyways, rebellion",
+      "id": 13
+    },
+    {
+      "userId": 1,
+      "verseId": 10,
+      "chapterId": 28,
+      "bookId": "GEN",
+      "title": "walking in the will of God",
+      "body": "Jacob was set out to do the will of God, because of that, He had an experience with God. ",
+      "id": 14
+    },
+    {
+      "userId": 1,
+      "verseId": 18,
+      "chapterId": 28,
+      "bookId": "GEN",
+      "title": "Uncomfortable ",
+      "body": "Jacob used what He found was uncomfortable, and used it as an pillar to God",
+      "id": 15
     }
   ]
 }
