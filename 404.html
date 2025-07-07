@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Capstone</title>
     <script>
-      window.location.replace("/Capstone-2025-Dominic" + window.location.pathname);
+      const redirectPath = window.location.pathname + window.location.search + window.location.hash;
+      window.location.replace(redirectPath);
     </script>
   </head>
   <body>
