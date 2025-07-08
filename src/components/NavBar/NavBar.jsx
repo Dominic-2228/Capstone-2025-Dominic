@@ -23,7 +23,7 @@ export const NavBar = ({ currentUser }) => {
     <div className="navbar-wrapper">
       <Navbar expand="lg" bg="secondary" variant="dark" className="custom-bar">
         <Container>
-          <Navbar.Brand href="/" className="d-flex align-items-center">
+          <Navbar.Brand as={Link} to="/" className="d-flex align-items-center">
             <div className="button-icon">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

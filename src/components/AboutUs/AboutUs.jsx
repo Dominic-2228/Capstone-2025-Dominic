@@ -6,7 +6,7 @@ export const AboutUs = () => {
     <div className="h2Img-container">
     <div className="image-wrapper">
     <h2 className="aboutus-header">Our Story</h2>
-      <img src="IMG/rod-long-DRgrzQQsJDA-unsplash-scaled.jpg" alt="bible" className="aboutus-img"></img>
+      <img src="/Capstone-2025-Dominic/IMG/rod-long-DRgrzQQsJDA-unsplash-scaled.jpg" alt="bible" className="aboutus-img"></img>
     </div>
     </div>
     <div className="aboutus-p">

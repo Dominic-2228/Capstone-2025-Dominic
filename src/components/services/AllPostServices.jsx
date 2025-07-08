@@ -1,11 +1,11 @@
 export const getAllPost = () => {
-  return fetch("http://localhost:8088/posts?_expand=user").then((res) =>
+  return fetch("https://capstone-2025-dominic-3.onrender.com/posts?_expand=user").then((res) =>
     res.json()
   );
 };
 
 export const createCustomPost = (post) => {
-  return fetch("http://localhost:8088/posts", {
+  return fetch("https://capstone-2025-dominic-3.onrender.com/posts", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -15,7 +15,7 @@ export const createCustomPost = (post) => {
 };
 
 export const createUpdatePost = (post, postId) => {
-  return fetch(`http://localhost:8088/posts/${postId}`, {
+  return fetch(`https://capstone-2025-dominic-3.onrender.com/posts/${postId}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
@@ -25,13 +25,13 @@ export const createUpdatePost = (post, postId) => {
 };
 
 export const deletePost = (id) => {
-  return fetch(`http://localhost:8088/posts/${id}`, {
+  return fetch(`https://capstone-2025-dominic-3.onrender.com/posts/${id}`, {
     method: "DELETE",
   });
 };
 
 export const likePostPut = (id, updatedPost) => {
-  return fetch(`http://localhost:8088/posts/${id}`, {
+  return fetch(`https://capstone-2025-dominic-3.onrender.com/posts/${id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
@@ -42,12 +42,12 @@ export const likePostPut = (id, updatedPost) => {
 
 export const getLikedPosts = () => {
   return fetch(
-    `http://localhost:8088/userLikes?_expand=user&_expand=post`
+    `https://capstone-2025-dominic-3.onrender.com/userLikes?_expand=user&_expand=post`
   ).then((res) => res.json());
 };
 
 export const postComments = (comment) => {
-  return fetch(`http://localhost:8088/comments`, {
+  return fetch(`https://capstone-2025-dominic-3.onrender.com/comments`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -57,7 +57,7 @@ export const postComments = (comment) => {
 };
 
 export const saveUpdatedNote = (note) => {
-  return fetch("http://localhost:8088/notes", {
+  return fetch("https://capstone-2025-dominic-3.onrender.com/notes", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -67,13 +67,13 @@ export const saveUpdatedNote = (note) => {
 };
 
 export const deleteNote = (id) => {
-  return fetch(`http://localhost:8088/notes/${id}`, {
+  return fetch(`https://capstone-2025-dominic-3.onrender.com/notes/${id}`, {
     method: "DELETE"
   })
 }
 
 export const createUserLike = (obj) => {
-  return fetch(`http://localhost:8088/userLikes`, {
+  return fetch(`https://capstone-2025-dominic-3.onrender.com/userLikes`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json"

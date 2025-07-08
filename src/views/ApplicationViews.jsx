@@ -39,15 +39,15 @@ export const ApplicationViews = () => {
           }
         >
           <Route index element={<HomePage />} />
-          <Route path="/allposts" element={<AllPost currentUser={currentUser}/>} />
-          <Route path="/myposts" element={<MyPost currentUser={currentUser}/>}/>
-          <Route path="/createpost" element={<CreatePost currentUser={currentUser}/>}/>
-          <Route path="/myposts/:postId" element={<EditPost currentUser={currentUser}/>}/> 
-          <Route path="/support" element={<Support/>}/>
-          <Route path="/likedposts" element={<LikedPost currentUser={currentUser} />} />
-          <Route path="/comment/:postId" element={<CommentPost currentUser={currentUser}/>}/>
-          <Route path="/createcomment/:postId" element={<CreateComment currentUser={currentUser}/>}/>
-          <Route path="/aboutus" element={<AboutUs/>}/>
+          <Route path="allposts" element={<AllPost currentUser={currentUser}/>} />
+          <Route path="myposts" element={<MyPost currentUser={currentUser}/>}/>
+          <Route path="createpost" element={<CreatePost currentUser={currentUser}/>}/>
+          <Route path="myposts/:postId" element={<EditPost currentUser={currentUser}/>}/> 
+          <Route path="support" element={<Support/>}/>
+          <Route path="likedposts" element={<LikedPost currentUser={currentUser} />} />
+          <Route path="comment/:postId" element={<CommentPost currentUser={currentUser}/>}/>
+          <Route path="createcomment/:postId" element={<CreateComment currentUser={currentUser}/>}/>
+          <Route path="aboutus" element={<AboutUs/>}/>
           <Route path="faq" element={<FaqJSX/>}/>
           <Route path="bible" element={<Bible currentUser={currentUser}/>}/>
         </Route>

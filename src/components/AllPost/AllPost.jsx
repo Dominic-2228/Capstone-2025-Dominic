@@ -87,7 +87,7 @@ export const AllPost = ({ currentUser }) => {
                 </Card.Body>
                 <ListGroup className="list-group-flush">
                   <ListGroup.Item>
-                    Posted By: {post.user.fullName}
+                    Posted By: {post.user?.fullName}
                   </ListGroup.Item>
                   <ListGroup.Item>Book: {post.bibleBookId}</ListGroup.Item>
                   <ListGroup.Item>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Capstone</title>
+    <script>
+      (function() {
+        const base = "/Capstone-2025-Dominic"
+        const path = window.location.pathname
+        const query = window.location.search || ''
+        const hash = window.location.hash || ''
+
+        if (!path.startsWith(base)) {
+          const redirect = base + path + query + hash
+          window.location.replace(redirect)
+        }
+      }) ()
+    </script>
+  </head>
+  <body>
+    <p>Redirecting to the app...</p>
+  </body>
+</html>

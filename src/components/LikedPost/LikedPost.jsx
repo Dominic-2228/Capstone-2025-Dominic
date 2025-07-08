@@ -13,6 +13,7 @@ export const LikedPost = ({ currentUser }) => {
   }, []);
 
   const userLiked = posts.filter((post) => post.userId === currentUser.id);
+  console.log(userLiked)
 
   // const clickLike = (postId) => {
   //   const updatedLikesInPost = posts.map((post) =>
@@ -34,26 +35,26 @@ export const LikedPost = ({ currentUser }) => {
               <div className="allPost-idv">
                 <Card style={{ width: "18rem" }}>
                   <Card.Body>
-                    <Card.Title>{post.post.title}</Card.Title>
-                    <Card.Text>{post.post.body}</Card.Text>
+                    <Card.Title>{post.post?.title}</Card.Title>
+                    <Card.Text>{post.post?.body}</Card.Text>
                   </Card.Body>
                   <ListGroup className="list-group-flush">
                     <ListGroup.Item>
-                      Posted By: {post.post.user.fullName}
+                      Posted By: {post.post?.user?.fullName}
                     </ListGroup.Item>
                     <ListGroup.Item>
-                      Book: {post.post.bibleBookId}
+                      Book: {post.post?.bibleBookId}
                     </ListGroup.Item>
                     <ListGroup.Item>
-                      Chapter: {post.post.bibleChapterId}
+                      Chapter: {post.post?.bibleChapterId}
                     </ListGroup.Item>
                     <ListGroup.Item>
-                      Verse: {post.post.bibleVerseId}
+                      Verse: {post.post?.bibleVerseId}
                     </ListGroup.Item>
                     <ListGroup.Item>
-                      Posted At: {new Date(post.post.date).toLocaleString()}
+                      Posted At: {new Date(post.post?.date).toLocaleString()}
                     </ListGroup.Item>
-                    <ListGroup.Item>Likes: {post.post.likes}</ListGroup.Item>
+                    <ListGroup.Item>Likes: {post.post?.likes}</ListGroup.Item>
                   </ListGroup>
                   <Card.Body>
                     <Button

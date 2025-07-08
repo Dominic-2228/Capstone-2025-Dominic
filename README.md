@@ -1,5 +1,8 @@
 # React + Vite
 
+
+Please Allow for 1 Minute after opening Website to allow JSON Server to spin up. Thank You!
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
