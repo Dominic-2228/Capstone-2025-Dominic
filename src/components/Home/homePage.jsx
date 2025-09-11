@@ -11,7 +11,7 @@ export const HomePage = () => {
       </div>
 
       <img
-        src="/Capstone-2025-Dominic/IMG/37784_Open_bible-scaled.jpg"
+        src="public/IMG/37784_Open_bible-scaled.jpg"
         alt="bible"
         className="bible-img"
       ></img>
@@ -24,7 +24,7 @@ export const HomePage = () => {
         <Card style={{ width: "18rem" }}>
           <Card.Img
             variant="top"
-            src="/Capstone-2025-Dominic/IMG/Screenshot 2025-05-09 123829.png"
+            src="public/IMG/Screenshot 2025-05-09 123829.png"
           />
           <Card.Body>
             <Card.Title>Hope Of Gaza</Card.Title>
@@ -44,7 +44,7 @@ export const HomePage = () => {
       </div>
       <div className="oversea-works">
         <Card style={{ width: "18rem" }}>
-          <Card.Img variant="top" src="/Capstone-2025-Dominic/IMG/Screenshot 2025-05-06 142151.png" />
+          <Card.Img variant="top" src="public/IMG/Screenshot 2025-05-06 142151.png" />
           <Card.Body>
             <Card.Title>UPCI Global Missions</Card.Title>
             <Card.Text>

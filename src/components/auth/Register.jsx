@@ -5,8 +5,11 @@ import { createUser, getUserByEmail } from "../services/userService.jsx"
 
 export const Register = () => {
   const [customer, setCustomer] = useState({
+    username: "",
+    password: "",
+    firstname: "",
+    lastname: "",
     email: "",
-    fullName: "",
     isStaff: false,
   })
   let navigate = useNavigate()
@@ -29,10 +32,15 @@ export const Register = () => {
 
   const handleRegister = (e) => {
     e.preventDefault()
-    getUserByEmail(customer.email).then((response) => {
+
+    const userData = {
+      username: customer.username,
+      password: customer.password
+    }
+    getUserByEmail(userData).then((response) => {
       if (response.length > 0) {
         // Duplicate email. No good.
-        window.alert("Account with that email address already exists")
+        window.alert("Account with that username already exists")
       } else {
         // Good email, create user.
         registerNewUser()
@@ -56,9 +64,22 @@ export const Register = () => {
             <input
               onChange={updateCustomer}
               type="text"
-              id="fullName"
+              id="firstname"
               className="form-control"
-              placeholder="Enter your name"
+              placeholder="Enter your First name"
+              required
+              autoFocus
+            />
+          </div>
+        </fieldset>
+          <fieldset>
+          <div className="form-group">
+            <input
+              onChange={updateCustomer}
+              type="text"
+              id="lastname"
+              className="form-control"
+              placeholder="Enter your Last name"
               required
               autoFocus
             />
@@ -68,10 +89,35 @@ export const Register = () => {
           <div className="form-group">
             <input
               onChange={updateCustomer}
-              type="email"
+              type="text"
               id="email"
               className="form-control"
-              placeholder="Email address"
+              placeholder="Enter your Email Address"
+              required
+              autoFocus
+            />
+          </div>
+        </fieldset>
+        <fieldset>
+          <div className="form-group">
+            <input
+              onChange={updateCustomer}
+              type="username"
+              id="username"
+              className="form-control"
+              placeholder="Username"
+              required
+            />
+          </div>
+        </fieldset>
+        <fieldset>
+          <div className="form-group">
+            <input
+              onChange={updateCustomer}
+              type="password"
+              id="password"
+              className="form-control"
+              placeholder="Password"
               required
             />
           </div>

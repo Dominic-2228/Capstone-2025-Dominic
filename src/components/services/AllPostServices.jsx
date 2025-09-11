@@ -1,7 +1,28 @@
-export const getAllPost = () => {
-  return fetch("https://capstone-2025-dominic-3.onrender.com/posts?_expand=user").then((res) =>
-    res.json()
-  );
+import { fetchWithoutResponse, fetchWithResponse } from "./fetcher.js"
+
+export const getAllPost = (id = undefined) => {
+try {
+    let url = "posts";
+
+    // If an id is provided, fetch a single user
+    if (id) {
+      url += `/${id}`;
+    }
+
+    const stored = localStorage.getItem("bible_user");
+    const parsed = stored ? JSON.parse(stored) : null;
+    const token = parsed?.token; 
+    console.log(token)
+
+    return fetchWithResponse(url, {
+      headers: {
+        Authorization: `Token ${token}`,
+      }
+    })
+  } catch (error) {
+    console.error("Error fetching packages:", error);
+    return []; // optional fallback for logged-out users
+  }
 };
 
 export const createCustomPost = (post) => {

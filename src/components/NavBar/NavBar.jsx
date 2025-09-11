@@ -6,7 +6,7 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { Link, useNavigate } from "react-router-dom";
 import { Button, Offcanvas } from "react-bootstrap";
-import { getProfileUsersById } from "../services/userService.jsx";
+import { getUser } from "../services/userService.jsx";
 
 export const NavBar = ({ currentUser }) => {
   const navigate = useNavigate();
@@ -14,7 +14,7 @@ export const NavBar = ({ currentUser }) => {
   const [user, setUser] = useState([]);
 
   useEffect(() => {
-    getProfileUsersById(currentUser.id).then(setUser);
+    getUser(currentUser.id).then(setUser);
   }, [currentUser]);
 
   const handleClose = () => setShow(false);
@@ -94,9 +94,6 @@ export const NavBar = ({ currentUser }) => {
           </Nav.Link>
           <Nav.Link>
             <Button onClick={handleShow}>
-              {user?.profilePhoto ? (
-                user?.profilePhoto
-              ) : (
                 <div className="button-icon-edit">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -113,29 +110,24 @@ export const NavBar = ({ currentUser }) => {
                     />
                   </svg>
                 </div>
-              )}
             </Button>
               <Offcanvas show={show} onHide={handleClose} className="offcanvas-profile">
                 <Offcanvas.Header closeButton className="offcanvas-details">
                   <Offcanvas.Title>Profile Details</Offcanvas.Title>
                 </Offcanvas.Header>
                 <Offcanvas.Body className="offcanvas-details">
-                  {user.map((obj) => {
-                    return (
                       <>
                         <img
                           className="profile-photo"
-                          src={obj.profilePhoto}
-                        ></img>
+                          src={`${user.profilePhoto}`}
+                        />
                         <h2>Name: </h2>
-                        <p>{obj.fullName}</p>
+                        <p>{user.first_name} {user.last_name}</p>
                         <h2>Email Address: </h2>
-                        <p>{obj.email}</p>
+                        <p>{user.email}</p>
                         <h2>Admin: </h2>
-                        {obj.isStaff ? <p>Yes</p> : <p>No</p>}
+                        {user.isStaff ? <p>Yes</p> : <p>No</p>}
                       </>
-                    );
-                  })}
                 </Offcanvas.Body>
               </Offcanvas>
           </Nav.Link>

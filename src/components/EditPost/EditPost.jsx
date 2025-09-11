@@ -6,7 +6,7 @@ import {
   getPostChapter,
 } from "../services/apiCall.jsx";
 import { createUpdatePost, deletePost } from "../services/AllPostServices.jsx";
-import { getUserById } from "../services/userService.jsx";
+import { getUserByPostId } from "../services/userService.jsx";
 import { Button } from "react-bootstrap";
 
 export const EditPost = ({ currentUser }) => {
@@ -36,7 +36,7 @@ export const EditPost = ({ currentUser }) => {
   }, []);
 
   useEffect(() => {
-    getUserById(postId).then((data) => {
+    getUserByPostId(postId).then((data) => {
       const postObj = data[0];
       setPostById(postObj);
     });

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getUserByUserId } from "../services/userService.jsx";
+import { getUserByPostId } from "../services/userService.jsx";
 import { Button, Card, ListGroup } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { getPostChapter } from "../services/apiCall.jsx";
@@ -10,7 +10,7 @@ export const MyPost = ({ currentUser }) => {
   const [verse, setVerse] = useState("");
 
   useEffect(() => {
-    getUserByUserId(currentUser.id).then(setMyPosts);
+    getUserByPostId(currentUser.id).then(setMyPosts);
   }, [currentUser]);
 
   // useEffect(() => {
