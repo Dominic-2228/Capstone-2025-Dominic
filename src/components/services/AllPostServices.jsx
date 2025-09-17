@@ -26,14 +26,28 @@ try {
 };
 
 export const createCustomPost = (post) => {
-  return fetch("https://capstone-2025-dominic-3.onrender.com/posts", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(post),
-  }).then((res) => res.json());
-};
+try {
+    let url = "posts";
+
+    const stored = localStorage.getItem("bible_user");
+    const parsed = stored ? JSON.parse(stored) : null;
+    const token = parsed?.token; 
+    console.log(token)
+
+    return fetchWithResponse(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Token ${token}`,
+      },
+      body: JSON.stringify(post)
+    })
+  }
+  catch (error) {
+    console.error("Error fetching packages:", error);
+    return []; // optional fallback for logged-out users
+  }
+  }
 
 export const createUpdatePost = (post, postId) => {
   return fetch(`https://capstone-2025-dominic-3.onrender.com/posts/${postId}`, {

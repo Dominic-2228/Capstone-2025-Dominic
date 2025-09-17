@@ -22,7 +22,7 @@ export const CreatePost = ({ currentUser }) => {
     bibleBookId: "",
     bibleChapterId: 0,
     bibleVerseId: 0,
-    userId: 0,
+    user: 0,
     likes: 0,
     date: new Date(),
   });
@@ -48,7 +48,7 @@ export const CreatePost = ({ currentUser }) => {
   useEffect(() => {
     if (currentUser?.id) {
       const copy = { ...createPosts };
-      copy.userId = currentUser.id;
+      copy.user = currentUser.id;
       setCreatePosts(copy);
     }
   }, [currentUser]);
@@ -77,7 +77,7 @@ export const CreatePost = ({ currentUser }) => {
       createPosts.bibleBookId &&
       createPosts.bibleChapterId &&
       createPosts.bibleVerseId &&
-      createPosts.userId
+      createPosts.user
     ) {
       createCustomPost(createPosts).then(() => {
         navigate(`/myposts`);
