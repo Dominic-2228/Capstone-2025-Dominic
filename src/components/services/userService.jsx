@@ -151,7 +151,7 @@ export const getNotesByUserId = (id = undefined) => {
 
     return fetchWithResponse(url, {
       headers: {
-        Authorization: `Token ${token}}`,
+        Authorization: `Token ${token}`,
       }
     })
   } catch (error) {
