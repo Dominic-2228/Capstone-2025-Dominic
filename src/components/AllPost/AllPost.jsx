@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 import {
   createUserLike,
   deletePost,
+  deleteUserLike,
   getAllPost,
-  likePostPut,
 } from "../services/AllPostServices.jsx";
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from "react-bootstrap";
@@ -48,23 +48,37 @@ export const AllPost = ({ currentUser }) => {
     }
   }, [posts, selection.chapter?.content]);
 
-  const clickLike = (postId) => {
-    const updatedLikesInPost = posts.map((post) =>
-      post.id === postId ? { ...post, likes: post.likes + 1 } : post
-    );
-    setPosts(updatedLikesInPost);
-    const updatedSinglePost = updatedLikesInPost.find(
-      (post) => post.id === postId
-    );
-    likePostPut(postId, updatedSinglePost);
-
-    const likedPost = {
-      postId: postId,
-      userId: currentUser.id,
-    };
-
-    createUserLike(likedPost).then((res) => res.json());
+const clickLike = (postId) => {
+  setIsLiked(true)
+  const likedPost = {
+    user_id: currentUser.id,
+    post_id: postId,
   };
+
+  const updatedLikesInPost = posts.map((post) =>
+    post.id === postId ? { ...post, likes: post.likes + 1 } : post
+  );
+  setPosts(updatedLikesInPost);
+
+  createUserLike(likedPost)
+    .then((res) => res.json())
+    .then((data) => {
+      console.log("Like created:", data);
+      // store `data.id` if you want to unlike later
+    });
+};
+
+const clickUnlike = (likeId, postId) => {
+  setIsLiked(false)
+  const updatedLikesInPost = posts.map((post) =>
+    post.id === postId ? { ...post, likes: post.likes - 1 } : post
+  );
+  setPosts(updatedLikesInPost);
+
+  deleteUserLike(likeId).then(() => {
+    console.log("Like removed");
+  });
+};
 
   const handleDelete = (e) => {
     e.preventDefault();
@@ -105,7 +119,8 @@ export const AllPost = ({ currentUser }) => {
                     <Card.Body>
                       <Button
                         onClick={() => {
-                          clickLike(post.id);
+                          {isLiked ? clickUnlike(post.id) :  clickLike(post.id)}
+                          
                         }}
                       >
                         {" "}

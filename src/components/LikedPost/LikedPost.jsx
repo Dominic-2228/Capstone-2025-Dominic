@@ -9,8 +9,8 @@ export const LikedPost = ({ currentUser }) => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    getLikedPosts().then(setPosts);
-  }, []);
+    getLikedPosts(currentUser.id).then(setPosts);
+  }, [currentUser]);
 
   const userLiked = posts.filter((post) => post.userId === currentUser.id);
   console.log(userLiked)

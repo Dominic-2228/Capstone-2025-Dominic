@@ -64,20 +64,36 @@ export const deletePost = (id) => {
   });
 };
 
-export const likePostPut = (id, updatedPost) => {
-  return fetch(`https://capstone-2025-dominic-3.onrender.com/posts/${id}`, {
-    method: "PUT",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(updatedPost),
-  }).then((res) => res.json());
-};
+// export const likePostPut = (id, updatedPost) => {
+//   let url = `userlikes/${id}`;
 
-export const getLikedPosts = () => {
-  return fetch(
-    `https://capstone-2025-dominic-3.onrender.com/userLikes?_expand=user&_expand=post`
-  ).then((res) => res.json());
+//   const stored = localStorage.getItem("bible_user");
+//   const parsed = stored ? JSON.parse(stored) : null;
+//   const token = parsed?.token;
+
+//   return fetchWithResponse(url, {
+//     method: "PUT",
+//     headers: {
+//       Authorization: `Token ${token}`,
+//       "Content-Type": "application/json",
+//     },
+//     body: JSON.stringify(updatedPost),
+//   });
+// };
+
+export const getLikedPosts = (id) => {
+  let url = `userlikes/${id}`;
+
+  const stored = localStorage.getItem("bible_user");
+  const parsed = stored ? JSON.parse(stored) : null;
+  const token = parsed?.token;
+  console.log(token);
+
+  return fetchWithResponse(url, {
+    headers: {
+      Authorization: `Token ${token}`,
+    },
+  });
 };
 
 export const postComments = (comment) => {
@@ -120,11 +136,33 @@ export const deleteNote = (id = undefined) => {
 };
 
 export const createUserLike = (obj) => {
-  return fetch(`https://capstone-2025-dominic-3.onrender.com/userLikes`, {
+  let url = "userlikes";
+
+  const stored = localStorage.getItem("bible_user");
+  const parsed = stored ? JSON.parse(stored) : null;
+  const token = parsed?.token;
+
+  return fetchWithResponse(url, {
     method: "POST",
     headers: {
+      Authorization: `Token ${token}`,
       "Content-Type": "application/json",
     },
     body: JSON.stringify(obj),
+  });
+};
+
+export const deleteUserLike = (id) => {
+  let url = `userlikes/${id}`;
+
+  const stored = localStorage.getItem("bible_user");
+  const parsed = stored ? JSON.parse(stored) : null;
+  const token = parsed?.token;
+
+  return fetchWithResponse(url, {
+    method: "DELETE",
+    headers: {
+      Authorization: `Token ${token}`,
+    },
   });
 };
