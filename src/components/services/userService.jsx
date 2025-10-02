@@ -1,7 +1,7 @@
-import { fetchWithoutResponse, fetchWithResponse } from "./fetcher.js"
+import { fetchWithoutResponse, fetchWithResponse } from "./fetcher.js";
 
 export const getUserByEmail = async (request) => {
-  const body = JSON.stringify(request)
+  const body = JSON.stringify(request);
   console.log("Sending login body:", body);
 
   const res = await fetchWithoutResponse(`users/login`, {
@@ -15,22 +15,23 @@ export const getUserByEmail = async (request) => {
 
   const data = await res.json();
   return Response.json(data);
-}
+};
 
 export const createUser = (customer) => {
-  let url = "users/register"
-  return fetchWithResponse(url , {
+  let url = "users/register";
+
+  return fetchWithResponse(url, {
     method: "POST",
     headers: {
-      "Content-Type" : "application/json"
+      "Content-Type": "application/json",
     },
-    body: JSON.stringify(customer)
-  }).then(res => res.json())
-}
+    body: JSON.stringify(customer),
+  });
+};
 
 export const getNonStaffUsers = () => {
   try {
-    let url = "users?is_staff=false"
+    let url = "users?is_staff=false";
 
     const stored = localStorage.getItem("bible_user");
     const parsed = stored ? JSON.parse(stored) : null;
@@ -39,34 +40,32 @@ export const getNonStaffUsers = () => {
     return fetchWithResponse(url, {
       headers: {
         Authorization: `Token ${token}`,
-      }
-    })
-  }
-  catch (error) {
+      },
+    });
+  } catch (error) {
     console.error("Error fetching packages:", error);
     return []; // optional fallback for logged-out users
   }
-}
+};
 
 export const getStaffUsers = () => {
   try {
-    let url = "users?is_staff=true"
+    let url = "users?is_staff=true";
 
     const stored = localStorage.getItem("bible_user");
     const parsed = stored ? JSON.parse(stored) : null;
-    const token = parsed?.token; 
+    const token = parsed?.token;
 
     return fetchWithResponse(url, {
       headers: {
         Authorization: `Token ${token}`,
-      }
-    })
-  }
-  catch (error) {
+      },
+    });
+  } catch (error) {
     console.error("Error fetching packages:", error);
     return []; // optional fallback for logged-out users
   }
-}
+};
 
 // export const getProfileUsersById = (id) => {
 //  try {
@@ -87,7 +86,7 @@ export const getStaffUsers = () => {
 // setting front-end to backend django.
 
 export const getUserByPostId = (id = undefined) => {
-    try {
+  try {
     let url = "posts";
 
     // If an id is provided, fetch a single review
@@ -97,18 +96,18 @@ export const getUserByPostId = (id = undefined) => {
 
     const stored = localStorage.getItem("bible_user");
     const parsed = stored ? JSON.parse(stored) : null;
-    const token = parsed?.token; 
+    const token = parsed?.token;
 
     return fetchWithResponse(url, {
       headers: {
         Authorization: `Token ${token}`,
-      }
-    })
+      },
+    });
   } catch (error) {
     console.error("Error fetching packages:", error);
     return []; // optional fallback for logged-out users
   }
-}
+};
 
 //this may be conflicting with getProfileUserById
 export const getUser = (id = undefined) => {
@@ -122,14 +121,14 @@ export const getUser = (id = undefined) => {
 
     const stored = localStorage.getItem("bible_user");
     const parsed = stored ? JSON.parse(stored) : null;
-    const token = parsed?.token; 
-    console.log(token)
+    const token = parsed?.token;
+    console.log(token);
 
     return fetchWithResponse(url, {
       headers: {
         Authorization: `Token ${token}`,
-      }
-    })
+      },
+    });
   } catch (error) {
     console.error("Error fetching packages:", error);
     return []; // optional fallback for logged-out users
@@ -147,21 +146,21 @@ export const getNotesByUserId = (id = undefined) => {
 
     const stored = localStorage.getItem("bible_user");
     const parsed = stored ? JSON.parse(stored) : null;
-    const token = parsed?.token; 
+    const token = parsed?.token;
 
     return fetchWithResponse(url, {
       headers: {
         Authorization: `Token ${token}`,
-      }
-    })
+      },
+    });
   } catch (error) {
     console.error("Error fetching packages:", error);
     return []; // optional fallback for logged-out users
   }
-}
+};
 
 export const getComment = (id = undefined) => {
-    try {
+  try {
     let url = "notes";
 
     // If an id is provided, fetch a single review
@@ -171,15 +170,15 @@ export const getComment = (id = undefined) => {
 
     const stored = localStorage.getItem("bible_user");
     const parsed = stored ? JSON.parse(stored) : null;
-    const token = parsed?.token; 
+    const token = parsed?.token;
 
     return fetchWithResponse(url, {
       headers: {
         Authorization: `Token ${token}`,
-      }
-    })
+      },
+    });
   } catch (error) {
     console.error("Error fetching packages:", error);
     return []; // optional fallback for logged-out users
   }
-}
+};

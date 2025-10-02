@@ -21,11 +21,11 @@ export const Register = () => {
           "bible_user",
           JSON.stringify({
             id: createdUser.id,
-            staff: createdUser.isStaff,
+            staff: createdUser.is_staff,
           })
         )
 
-        navigate("/")
+        navigate("/login")
       }
     })
   }
@@ -122,7 +122,9 @@ export const Register = () => {
             />
           </div>
         </fieldset>
-        <fieldset>
+
+{/* need to find another option for logging in as an admin */}
+        {/* <fieldset>
           <div className="form-group">
             <label>
               <input
@@ -137,7 +139,9 @@ export const Register = () => {
               I am an employee{" "}
             </label>
           </div>
-        </fieldset>
+        </fieldset> */}
+
+
         <fieldset>
           <div className="form-group">
             <button className="login-btn btn-info" type="submit">

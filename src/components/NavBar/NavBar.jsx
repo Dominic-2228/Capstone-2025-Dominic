@@ -50,9 +50,14 @@ export const NavBar = ({ currentUser }) => {
               <Nav.Link as={Link} to="/myposts">
                 My Posts
               </Nav.Link>
-              <Nav.Link as={Link} to="/likedposts">
+
+{/* fixing likes button */}
+              {/* <Nav.Link as={Link} to="/likedposts">
                 Liked Posts
-              </Nav.Link>
+              </Nav.Link> */}
+
+
+              
               <Nav.Link as={Link} to="/createpost">
                 Create Post
               </Nav.Link>

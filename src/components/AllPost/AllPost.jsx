@@ -51,8 +51,8 @@ export const AllPost = ({ currentUser }) => {
 const clickLike = (postId) => {
   setIsLiked(true)
   const likedPost = {
-    user_id: currentUser.id,
-    post_id: postId,
+    user: currentUser.id,
+    post: postId,
   };
 
   const updatedLikesInPost = posts.map((post) =>
@@ -101,7 +101,7 @@ const clickUnlike = (likeId, postId) => {
                 </Card.Body>
                 <ListGroup className="list-group-flush">
                   <ListGroup.Item>
-                    Posted By: {post.user?.fullName}
+                    Posted By: {post.user?.first_name}
                   </ListGroup.Item>
                   <ListGroup.Item>Book: {post.bibleBookId}</ListGroup.Item>
                   <ListGroup.Item>
@@ -112,12 +112,19 @@ const clickUnlike = (likeId, postId) => {
                   <ListGroup.Item>
                     Posted At: {new Date(post.date).toLocaleString()}
                   </ListGroup.Item>
-                  <ListGroup.Item>Likes: {post.likes}</ListGroup.Item>
+
+                  
+  {/* need to fix the likes, discarding until done */}
+
+
+                  {/* <ListGroup.Item>Likes: {post.likes}</ListGroup.Item> */}
                 </ListGroup>
                 {currentUser.id !== post.userId ? (
                   <div className="button-editpost">
                     <Card.Body>
-                      <Button
+
+{/* fixing likes button */}
+                      {/* <Button
                         onClick={() => {
                           {isLiked ? clickUnlike(post.id) :  clickLike(post.id)}
                           
@@ -140,7 +147,9 @@ const clickUnlike = (likeId, postId) => {
                             />
                           </svg>
                         </div>
-                      </Button>
+                      </Button> */}
+
+                      
                     </Card.Body>
                     <Card.Body>
                       <Button
