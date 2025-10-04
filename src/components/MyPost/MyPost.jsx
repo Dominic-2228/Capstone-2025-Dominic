@@ -41,7 +41,8 @@ export const MyPost = ({ currentUser }) => {
   return (
     <>
       <div className="AllPost-container">
-        {myPosts.map((post) => {
+        {console.log(myPosts)}
+        {myPosts.length != 0 ? myPosts.filter((post) => parseInt(currentUser) === post.user?.id).map((post) => {
           return (
             <div className="allPost-idv">
               <Card style={{ width: "18rem" }}>
@@ -51,7 +52,7 @@ export const MyPost = ({ currentUser }) => {
                 </Card.Body>
                 <ListGroup className="list-group-flush">
                   <ListGroup.Item>
-                    Posted By: {post.user?.fullName}
+                    Posted By: {post.user?.first_name}
                   </ListGroup.Item>
                   <ListGroup.Item>Book: {post.bibleBookId}</ListGroup.Item>
                   <ListGroup.Item>
@@ -64,7 +65,7 @@ export const MyPost = ({ currentUser }) => {
                   <ListGroup.Item>
                     Posted At: {new Date(post.date).toLocaleString()}
                   </ListGroup.Item>
-                  <ListGroup.Item>Likes: {post.likes}</ListGroup.Item>
+                  {/* <ListGroup.Item>Likes: {post.likes}</ListGroup.Item> */}
                 </ListGroup>
                 <Card.Body>
                   <Button as={Link} to={`/myposts/${post.id}`}>
@@ -90,7 +91,7 @@ export const MyPost = ({ currentUser }) => {
               </Card>
             </div>
           );
-        })}
+        }) : <p className="linebreak">No Post Yet!</p>}
       </div>
     </>
   );

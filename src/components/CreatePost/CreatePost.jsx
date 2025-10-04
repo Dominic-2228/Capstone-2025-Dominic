@@ -22,7 +22,6 @@ export const CreatePost = ({ currentUser }) => {
     bibleBookId: "",
     bibleChapterId: 0,
     bibleVerseId: 0,
-    user: 0,
     likes: 0,
     date: new Date(),
   });
