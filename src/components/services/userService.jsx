@@ -89,7 +89,7 @@ export const getUserByPostId = (id = undefined) => {
   try {
     let url = "posts";
 
-    // If an id is provided, fetch a single review
+    // If an id is provided, fetch a single post
     if (id) {
       url += `/${id}`;
     }

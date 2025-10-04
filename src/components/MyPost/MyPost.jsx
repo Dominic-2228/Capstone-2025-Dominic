@@ -42,7 +42,7 @@ export const MyPost = ({ currentUser }) => {
     <>
       <div className="AllPost-container">
         {console.log(myPosts)}
-        {myPosts.length != 0 ? myPosts.filter((post) => parseInt(currentUser) === post.user?.id).map((post) => {
+        {myPosts.length != 0 ? myPosts.map((post) => {
           return (
             <div className="allPost-idv">
               <Card style={{ width: "18rem" }}>

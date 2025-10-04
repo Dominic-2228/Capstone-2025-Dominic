@@ -44,6 +44,9 @@ export const NavBar = ({ currentUser }) => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mx-auto">
+              <Nav.Link as={Link} to="/bible">
+                Bible
+              </Nav.Link>
               <Nav.Link as={Link} to="/allposts">
                 All Posts
               </Nav.Link>
@@ -51,13 +54,11 @@ export const NavBar = ({ currentUser }) => {
                 My Posts
               </Nav.Link>
 
-{/* fixing likes button */}
+              {/* fixing likes button */}
               {/* <Nav.Link as={Link} to="/likedposts">
                 Liked Posts
               </Nav.Link> */}
 
-
-              
               <Nav.Link as={Link} to="/createpost">
                 Create Post
               </Nav.Link>
@@ -67,9 +68,6 @@ export const NavBar = ({ currentUser }) => {
                 </NavDropdown.Item>
                 <NavDropdown.Item as={Link} to="/faq">
                   FAQ
-                </NavDropdown.Item>
-                <NavDropdown.Item as={Link} to="/bible">
-                  Read The Bible
                 </NavDropdown.Item>
               </NavDropdown>
             </Nav>
@@ -99,42 +97,45 @@ export const NavBar = ({ currentUser }) => {
           </Nav.Link>
           <Nav.Link>
             <Button onClick={handleShow}>
-                <div className="button-icon-edit">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={1.5}
-                    stroke="currentColor"
-                    className="size-6"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-                    />
-                  </svg>
-                </div>
+              <div className="button-icon-edit">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="size-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                  />
+                </svg>
+              </div>
             </Button>
-              <Offcanvas show={show} onHide={handleClose} className="offcanvas-profile">
-                <Offcanvas.Header closeButton className="offcanvas-details">
-                  <Offcanvas.Title>Profile Details</Offcanvas.Title>
-                </Offcanvas.Header>
-                <Offcanvas.Body className="offcanvas-details">
-                      <>
-                        <img
-                          className="profile-photo"
-                          src={`${user.profilePhoto}`}
-                        />
-                        <h2>Name: </h2>
-                        <p>{user.first_name} {user.last_name}</p>
-                        <h2>Email Address: </h2>
-                        <p>{user.email}</p>
-                        <h2>Admin: </h2>
-                        {user.isStaff ? <p>Yes</p> : <p>No</p>}
-                      </>
-                </Offcanvas.Body>
-              </Offcanvas>
+            <Offcanvas
+              show={show}
+              onHide={handleClose}
+              className="offcanvas-profile"
+            >
+              <Offcanvas.Header closeButton className="offcanvas-details">
+                <Offcanvas.Title>Profile Details</Offcanvas.Title>
+              </Offcanvas.Header>
+              <Offcanvas.Body className="offcanvas-details">
+                <>
+                  <img className="profile-photo" src={`${user.profilePhoto}`} />
+                  <h2>Name: </h2>
+                  <p>
+                    {user.first_name} {user.last_name}
+                  </p>
+                  <h2>Email Address: </h2>
+                  <p>{user.email}</p>
+                  <h2>Admin: </h2>
+                  {user.isStaff ? <p>Yes</p> : <p>No</p>}
+                </>
+              </Offcanvas.Body>
+            </Offcanvas>
           </Nav.Link>
         </Container>
       </Navbar>
