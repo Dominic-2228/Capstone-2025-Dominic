@@ -25,7 +25,6 @@ export const EditPost = ({ currentUser }) => {
     bibleBookId: "",
     bibleChapterId: 0,
     bibleVerseId: 0,
-    userId: 0,
     likes: 0,
   });
 
@@ -36,10 +35,7 @@ export const EditPost = ({ currentUser }) => {
   }, []);
 
   useEffect(() => {
-    getUserByPostId(postId).then((data) => {
-      const postObj = data[0];
-      setPostById(postObj);
-    });
+    getUserByPostId(postId).then((data) => setPostById(data));
   }, [postId]);
   console.log(postById);
 
@@ -90,8 +86,7 @@ export const EditPost = ({ currentUser }) => {
       updatePosts.body &&
       updatePosts.bibleBookId &&
       updatePosts.bibleChapterId &&
-      updatePosts.bibleVerseId &&
-      updatePosts.userId
+      updatePosts.bibleVerseId
     ) {
       createUpdatePost(updatePosts, postId).then(() => {
         navigate(`/myposts`);
@@ -110,7 +105,7 @@ export const EditPost = ({ currentUser }) => {
   return (
     <>
       <div className="createUpdatepost-container">
-      <h2>Update Post</h2>
+        <h2>Update Post</h2>
         <form className="form-container">
           <h2>Book</h2>
           <Form.Select
@@ -203,20 +198,20 @@ export const EditPost = ({ currentUser }) => {
           <Button onClick={handleSave}>
             Save Updates
             <div className="button-icon-edit">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="size-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M9 8.25H7.5a2.25 2.25 0 0 0-2.25 2.25v9a2.25 2.25 0 0 0 2.25 2.25h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25H15m0-3-3-3m0 0-3 3m3-3V15"
-              />
-            </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="size-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M9 8.25H7.5a2.25 2.25 0 0 0-2.25 2.25v9a2.25 2.25 0 0 0 2.25 2.25h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25H15m0-3-3-3m0 0-3 3m3-3V15"
+                />
+              </svg>
             </div>
           </Button>
           <Button onClick={handleDelete}>

@@ -124,7 +124,7 @@ export const NavBar = ({ currentUser }) => {
               </Offcanvas.Header>
               <Offcanvas.Body className="offcanvas-details">
                 <>
-                  <img className="profile-photo" src={`${user.profilePhoto}`} />
+                  {/* <img className="profile-photo" src={`${user?.profilePhoto}`} /> */}
                   <h2>Name: </h2>
                   <p>
                     {user.first_name} {user.last_name}

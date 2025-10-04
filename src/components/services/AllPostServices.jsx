@@ -2,7 +2,7 @@ import { fetchWithoutResponse, fetchWithResponse } from "./fetcher.js";
 
 export const getAllPost = (id = undefined) => {
   try {
-    let url = "posts";
+    let url = "posts?user_id=${userId}";
 
     // If an id is provided, fetch a single user
     if (id) {
@@ -48,11 +48,23 @@ export const createCustomPost = (post) => {
   }
 };
 
-export const createUpdatePost = (post, postId) => {
-  return fetch(`https://capstone-2025-dominic-3.onrender.com/posts/${postId}`, {
+export const createUpdatePost = (post, postId = undefined) => {
+  let url = "posts";
+
+    if (postId) {
+      url += `/${postId}`;
+    }
+
+  const stored = localStorage.getItem("bible_user");
+  const parsed = stored ? JSON.parse(stored) : null;
+  const token = parsed?.token;
+
+
+  return fetchWithResponse(url, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
+      Authorization: `Token ${token}`,
     },
     body: JSON.stringify(post),
   }).then((res) => res.json());
