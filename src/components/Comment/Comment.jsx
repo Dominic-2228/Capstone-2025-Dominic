@@ -6,11 +6,12 @@ import { deleteComment } from "../services/AllPostServices.jsx";
 
 export const CommentPost = ({ currentUser }) => {
   const { postId } = useParams();
+  const [render, setRender] = useState(true)
 
   const [comments, setComments] = useState([]);
   useEffect(() => {
     getComment().then(setComments);
-  }, []);
+  }, [render]);
 
   return (
     <>
@@ -27,8 +28,16 @@ export const CommentPost = ({ currentUser }) => {
                     <Card.Title>User: {post?.user?.first_name}</Card.Title>
                     <Card.Text>{post.body}</Card.Text>
                   </Card.Body>
-                  {parseInt(currentUser) !== post.user ? (
-                    <button onClick={deleteComment}>Delete</button>
+                  {parseInt(currentUser.id) === post.user?.id ? (
+                    <button
+                      onClick={() =>
+                        deleteComment(post.id).then(() => {
+                          setRender((prev) => !prev);
+                        })
+                      }
+                    >
+                      Delete
+                    </button>
                   ) : (
                     ""
                   )}
