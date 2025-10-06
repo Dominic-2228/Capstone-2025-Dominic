@@ -11,7 +11,7 @@ export const CommentPost = ({ currentUser }) => {
   const [comments, setComments] = useState([]);
   useEffect(() => {
     getComment().then(setComments);
-  }, [render]);
+  }, [render, postId]);
 
   return (
     <>

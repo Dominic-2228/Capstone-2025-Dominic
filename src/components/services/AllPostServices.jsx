@@ -128,7 +128,7 @@ export const postComments = (comment) => {
       Authorization: `Token ${token}`,
     },
     body: JSON.stringify(comment),
-  }).then((res) => res.json());
+  })
 };
 
 export const deleteComment = (id = undefined) => {

@@ -14,13 +14,18 @@ export const CreateComment = ({ currentUser }) => {
 
   const navigate = useNavigate();
 
-  const handleSave = (e) => {
+  const handleSave = async (e) => {
     e.preventDefault();
 
     console.log(comment);
 
     if (comment.body && comment.user && comment.post) {
-      postComments(comment).then(navigate(`/comment/${postId}`));
+    try {
+      await postComments(comment);
+      navigate(`/comment/${postId}`);
+    } catch (error) {
+      console.error("Failed to post comment:", error);
+    }
     }
   };
 
