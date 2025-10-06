@@ -161,7 +161,7 @@ export const getNotesByUserId = (id = undefined) => {
 
 export const getComment = (id = undefined) => {
   try {
-    let url = "notes";
+    let url = "comments";
 
     // If an id is provided, fetch a single review
     if (id) {

@@ -8,8 +8,8 @@ export const CreateComment = ({ currentUser }) => {
   const { postId } = useParams();
   const [comment, setComment] = useState({
     body: "",
-    userId: currentUser.id,
-    postId: parseInt(postId),
+    user: currentUser.id,
+    post: parseInt(postId),
   });
 
   const navigate = useNavigate();
@@ -19,7 +19,7 @@ export const CreateComment = ({ currentUser }) => {
 
     console.log(comment);
 
-    if (comment.body && comment.userId && comment.postId) {
+    if (comment.body && comment.user && comment.post) {
       postComments(comment).then(navigate(`/comment/${postId}`));
     }
   };

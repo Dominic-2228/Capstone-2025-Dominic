@@ -51,14 +51,13 @@ export const createCustomPost = (post) => {
 export const createUpdatePost = (post, postId = undefined) => {
   let url = "posts";
 
-    if (postId) {
-      url += `/${postId}`;
-    }
+  if (postId) {
+    url += `/${postId}`;
+  }
 
   const stored = localStorage.getItem("bible_user");
   const parsed = stored ? JSON.parse(stored) : null;
   const token = parsed?.token;
-
 
   return fetchWithResponse(url, {
     method: "PUT",
@@ -71,8 +70,15 @@ export const createUpdatePost = (post, postId = undefined) => {
 };
 
 export const deletePost = (id) => {
-  return fetch(`https://capstone-2025-dominic-3.onrender.com/posts/${id}`, {
+  let url = "posts";
+
+  const stored = localStorage.getItem("bible_user");
+  const parsed = stored ? JSON.parse(stored) : null;
+  const token = parsed?.token;
+
+  return fetchWithResponse(`${url}/${id}`, {
     method: "DELETE",
+    Authorization: `Token ${token}`,
   });
 };
 
@@ -109,13 +115,32 @@ export const getLikedPosts = (id) => {
 };
 
 export const postComments = (comment) => {
-  return fetch(`https://capstone-2025-dominic-3.onrender.com/comments`, {
+  let url = "comments";
+
+  const stored = localStorage.getItem("bible_user");
+  const parsed = stored ? JSON.parse(stored) : null;
+  const token = parsed?.token;
+
+  return fetchWithResponse(url, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
+      Authorization: `Token ${token}`,
     },
     body: JSON.stringify(comment),
   }).then((res) => res.json());
+};
+
+export const deleteComment = (id = undefined) => {
+  let url = "comments";
+
+  if (id) {
+    url += `/${id}`;
+  }
+
+  return fetchWithResponse(url, {
+    method: "DELETE",
+  });
 };
 
 export const saveUpdatedNote = (note) => {
