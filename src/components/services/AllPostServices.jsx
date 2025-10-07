@@ -2,9 +2,9 @@ import { fetchWithoutResponse, fetchWithResponse } from "./fetcher.js";
 
 export const getAllPost = (id = undefined) => {
   try {
-    let url = "posts?user_id=${userId}";
+    let url = `posts`;
 
-    // If an id is provided, fetch a single user
+    // If an id is provided, fetch a single users posts
     if (id) {
       url += `/${id}`;
     }

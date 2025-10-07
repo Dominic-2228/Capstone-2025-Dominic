@@ -85,107 +85,101 @@ export const CreatePost = ({ currentUser }) => {
   };
 
   return (
-    <>
-      <div className="createUpdatepost-container">
-        <form className="form-container">
-          <h2>Book</h2>
-          <Form.Select
-            aria-label="Default select example"
-            onChange={(e) => {
-              handleBookChange(e);
-              const copy = { ...createPosts };
-              copy.bibleBookId = e.target.value;
-              setCreatePosts(copy);
-            }}
-          >
-            <option>Choose a Book</option>
-            {posts.books?.map((book) => {
-              return (
-                <option value={book.id} key={book.id}>
-                  {book.name}
-                </option>
-              );
-            })}
-          </Form.Select>
-          <h2>Chapter</h2>
-          <Form.Select
-            aria-label="Default select example"
-            onChange={(e) => {
-              const chapter = e.target.value;
-              setChapter(parseInt(chapter));
-              const copy = { ...createPosts };
-              copy.bibleChapterId = parseInt(chapter);
-              setCreatePosts(copy);
-            }}
-          >
-            <option>Choose a Chapter</option>
-            {chapterArray.map((number) => {
-              return (
-                <option key={number} value={number}>
-                  {number}
-                </option>
-              );
-            })}
-          </Form.Select>
+  <>
+    <div className="createUpdatepost-container">
+      <form className="form-container">
+        <h2>Book</h2>
+        <Form.Select
+          aria-label="Select a Bible book"
+          onChange={(e) => {
+            handleBookChange(e);
+            const copy = { ...createPosts };
+            copy.bibleBookId = e.target.value;
+            setCreatePosts(copy);
+          }}
+        >
+          <option value="">Choose a Book</option>
+          {posts.books?.map((book) => (
+            <option value={book.id} key={book.id}>
+              {book.name}
+            </option>
+          ))}
+        </Form.Select>
 
-          <h2>Verse</h2>
-          <Form.Select
-            aria-label="Default select example"
-            onChange={(e) => {
-              const chosenVerse = e.target.value;
-              setVerse(parseInt(chosenVerse));
-              const copy = { ...createPosts };
-              copy.bibleVerseId = parseInt(chosenVerse);
-              setCreatePosts(copy);
-            }}
-          >
-            <option>Select a Verse</option>
-            {verseArray.map((number) => {
-              return (
-                <option key={number} value={number}>
-                  {number}
-                </option>
-              );
-            })}
-          </Form.Select>
+        <h2>Chapter</h2>
+        <Form.Select
+          aria-label="Select a chapter"
+          onChange={(e) => {
+            const chapter = e.target.value;
+            setChapter(parseInt(chapter));
+            const copy = { ...createPosts };
+            copy.bibleChapterId = parseInt(chapter);
+            setCreatePosts(copy);
+          }}
+        >
+          <option value="">Choose a Chapter</option>
+          {chapterArray.map((number) => (
+            <option key={number} value={number}>
+              Chapter {number}
+            </option>
+          ))}
+        </Form.Select>
 
-          <h2>Title </h2>
-          <Form.Control
-            as="textarea"
-            rows={3}
-            placeholder="Enter Title"
-            type="text"
-            onChange={(e) => {
-              const chosenTitle = e.target.value;
-              const copy = { ...createPosts };
-              copy.title = chosenTitle;
-              setCreatePosts(copy);
-            }}
-          ></Form.Control>
-          <h2>Description</h2>
-          <Form.Control
-            as="textarea"
-            rows={3}
-            placeholder="Enter Description"
-            type="text"
-            onChange={(e) => {
-              const chosenDesc = e.target.value;
-              const copy = { ...createPosts };
-              copy.body = chosenDesc;
-              setCreatePosts(copy);
-            }}
-          ></Form.Control>
-        </form>
-        <Button variant="primary" onClick={handleSave}>
-          Create Post{" "}
-          <div className="button-icon-edit">
+        <h2>Verse</h2>
+        <Form.Select
+          aria-label="Select a verse"
+          onChange={(e) => {
+            const chosenVerse = e.target.value;
+            setVerse(parseInt(chosenVerse));
+            const copy = { ...createPosts };
+            copy.bibleVerseId = parseInt(chosenVerse);
+            setCreatePosts(copy);
+          }}
+        >
+          <option value="">Select a Verse</option>
+          {verseArray.map((number) => (
+            <option key={number} value={number}>
+              Verse {number}
+            </option>
+          ))}
+        </Form.Select>
+
+        <h2>Title</h2>
+        <Form.Control
+          as="textarea"
+          rows={2}
+          placeholder="Enter a meaningful title for your post"
+          onChange={(e) => {
+            const chosenTitle = e.target.value;
+            const copy = { ...createPosts };
+            copy.title = chosenTitle;
+            setCreatePosts(copy);
+          }}
+        />
+
+        <h2>Description</h2>
+        <Form.Control
+          as="textarea"
+          rows={5}
+          placeholder="Share your thoughts and reflections"
+          onChange={(e) => {
+            const chosenDesc = e.target.value;
+            const copy = { ...createPosts };
+            copy.body = chosenDesc;
+            setCreatePosts(copy);
+          }}
+        />
+      </form>
+
+      <Button variant="primary" onClick={handleSave}>
+        Create Post
+        <div className="button-icon-edit">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
-            strokeWidth={1.5}
+            strokeWidth={2}
             stroke="currentColor"
-            className="size-6"
           >
             <path
               strokeLinecap="round"
@@ -193,9 +187,9 @@ export const CreatePost = ({ currentUser }) => {
               d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
             />
           </svg>
-          </div>
-        </Button>
-      </div>
-    </>
-  );
+        </div>
+      </Button>
+    </div>
+  </>
+);
 };
